@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		18D280071C8540F3009F95B2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D280061C8540F3009F95B2 /* main.m */; };
+		18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D280091C8540F3009F95B2 /* AppDelegate.m */; };
+		18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2800C1C8540F3009F95B2 /* ViewController.m */; };
+		18D280101C8540F3009F95B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D2800E1C8540F3009F95B2 /* Main.storyboard */; };
+		18D280121C8540F3009F95B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 18D280111C8540F3009F95B2 /* Assets.xcassets */; };
+		18D280151C8540F3009F95B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */; };
+		18D280201C8540F3009F95B2 /* VRPictureBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2801F1C8540F3009F95B2 /* VRPictureBrowserTests.m */; };
+		18D2802B1C8540F3009F95B2 /* VRPictureBrowserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2802A1C8540F3009F95B2 /* VRPictureBrowserUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		18D2801C1C8540F3009F95B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D27FFA1C8540F3009F95B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D280011C8540F3009F95B2;
+			remoteInfo = VRPictureBrowser;
+		};
+		18D280271C8540F3009F95B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 18D27FFA1C8540F3009F95B2 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 18D280011C8540F3009F95B2;
+			remoteInfo = VRPictureBrowser;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18D280021C8540F3009F95B2 /* VRPictureBrowser.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VRPictureBrowser.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D280061C8540F3009F95B2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		18D280081C8540F3009F95B2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		18D280091C8540F3009F95B2 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		18D2800B1C8540F3009F95B2 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		18D2800C1C8540F3009F95B2 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		18D2800F1C8540F3009F95B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		18D280111C8540F3009F95B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		18D280141C8540F3009F95B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		18D280161C8540F3009F95B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D2801B1C8540F3009F95B2 /* VRPictureBrowserTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRPictureBrowserTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D2801F1C8540F3009F95B2 /* VRPictureBrowserTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRPictureBrowserTests.m; sourceTree = "<group>"; };
+		18D280211C8540F3009F95B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D280261C8540F3009F95B2 /* VRPictureBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRPictureBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		18D2802A1C8540F3009F95B2 /* VRPictureBrowserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRPictureBrowserUITests.m; sourceTree = "<group>"; };
+		18D2802C1C8540F3009F95B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		18D27FFF1C8540F3009F95B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280181C8540F3009F95B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280231C8540F3009F95B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		18D27FF91C8540F3009F95B2 = {
+			isa = PBXGroup;
+			children = (
+				18D280041C8540F3009F95B2 /* VRPictureBrowser */,
+				18D2801E1C8540F3009F95B2 /* VRPictureBrowserTests */,
+				18D280291C8540F3009F95B2 /* VRPictureBrowserUITests */,
+				18D280031C8540F3009F95B2 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		18D280031C8540F3009F95B2 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				18D280021C8540F3009F95B2 /* VRPictureBrowser.app */,
+				18D2801B1C8540F3009F95B2 /* VRPictureBrowserTests.xctest */,
+				18D280261C8540F3009F95B2 /* VRPictureBrowserUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		18D280041C8540F3009F95B2 /* VRPictureBrowser */ = {
+			isa = PBXGroup;
+			children = (
+				18D280081C8540F3009F95B2 /* AppDelegate.h */,
+				18D280091C8540F3009F95B2 /* AppDelegate.m */,
+				18D2800B1C8540F3009F95B2 /* ViewController.h */,
+				18D2800C1C8540F3009F95B2 /* ViewController.m */,
+				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
+				18D280111C8540F3009F95B2 /* Assets.xcassets */,
+				18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */,
+				18D280161C8540F3009F95B2 /* Info.plist */,
+				18D280051C8540F3009F95B2 /* Supporting Files */,
+			);
+			path = VRPictureBrowser;
+			sourceTree = "<group>";
+		};
+		18D280051C8540F3009F95B2 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				18D280061C8540F3009F95B2 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		18D2801E1C8540F3009F95B2 /* VRPictureBrowserTests */ = {
+			isa = PBXGroup;
+			children = (
+				18D2801F1C8540F3009F95B2 /* VRPictureBrowserTests.m */,
+				18D280211C8540F3009F95B2 /* Info.plist */,
+			);
+			path = VRPictureBrowserTests;
+			sourceTree = "<group>";
+		};
+		18D280291C8540F3009F95B2 /* VRPictureBrowserUITests */ = {
+			isa = PBXGroup;
+			children = (
+				18D2802A1C8540F3009F95B2 /* VRPictureBrowserUITests.m */,
+				18D2802C1C8540F3009F95B2 /* Info.plist */,
+			);
+			path = VRPictureBrowserUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		18D280011C8540F3009F95B2 /* VRPictureBrowser */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D2802F1C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowser" */;
+			buildPhases = (
+				18D27FFE1C8540F3009F95B2 /* Sources */,
+				18D27FFF1C8540F3009F95B2 /* Frameworks */,
+				18D280001C8540F3009F95B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VRPictureBrowser;
+			productName = VRPictureBrowser;
+			productReference = 18D280021C8540F3009F95B2 /* VRPictureBrowser.app */;
+			productType = "com.apple.product-type.application";
+		};
+		18D2801A1C8540F3009F95B2 /* VRPictureBrowserTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D280321C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserTests" */;
+			buildPhases = (
+				18D280171C8540F3009F95B2 /* Sources */,
+				18D280181C8540F3009F95B2 /* Frameworks */,
+				18D280191C8540F3009F95B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18D2801D1C8540F3009F95B2 /* PBXTargetDependency */,
+			);
+			name = VRPictureBrowserTests;
+			productName = VRPictureBrowserTests;
+			productReference = 18D2801B1C8540F3009F95B2 /* VRPictureBrowserTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		18D280251C8540F3009F95B2 /* VRPictureBrowserUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 18D280351C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserUITests" */;
+			buildPhases = (
+				18D280221C8540F3009F95B2 /* Sources */,
+				18D280231C8540F3009F95B2 /* Frameworks */,
+				18D280241C8540F3009F95B2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				18D280281C8540F3009F95B2 /* PBXTargetDependency */,
+			);
+			name = VRPictureBrowserUITests;
+			productName = VRPictureBrowserUITests;
+			productReference = 18D280261C8540F3009F95B2 /* VRPictureBrowserUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		18D27FFA1C8540F3009F95B2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = PaPaTV.COM;
+				TargetAttributes = {
+					18D280011C8540F3009F95B2 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					18D2801A1C8540F3009F95B2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 18D280011C8540F3009F95B2;
+					};
+					18D280251C8540F3009F95B2 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 18D280011C8540F3009F95B2;
+					};
+				};
+			};
+			buildConfigurationList = 18D27FFD1C8540F3009F95B2 /* Build configuration list for PBXProject "VRPictureBrowser" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 18D27FF91C8540F3009F95B2;
+			productRefGroup = 18D280031C8540F3009F95B2 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				18D280011C8540F3009F95B2 /* VRPictureBrowser */,
+				18D2801A1C8540F3009F95B2 /* VRPictureBrowserTests */,
+				18D280251C8540F3009F95B2 /* VRPictureBrowserUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		18D280001C8540F3009F95B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D280151C8540F3009F95B2 /* LaunchScreen.storyboard in Resources */,
+				18D280121C8540F3009F95B2 /* Assets.xcassets in Resources */,
+				18D280101C8540F3009F95B2 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280191C8540F3009F95B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280241C8540F3009F95B2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		18D27FFE1C8540F3009F95B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */,
+				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
+				18D280071C8540F3009F95B2 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280171C8540F3009F95B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D280201C8540F3009F95B2 /* VRPictureBrowserTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		18D280221C8540F3009F95B2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				18D2802B1C8540F3009F95B2 /* VRPictureBrowserUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		18D2801D1C8540F3009F95B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D280011C8540F3009F95B2 /* VRPictureBrowser */;
+			targetProxy = 18D2801C1C8540F3009F95B2 /* PBXContainerItemProxy */;
+		};
+		18D280281C8540F3009F95B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 18D280011C8540F3009F95B2 /* VRPictureBrowser */;
+			targetProxy = 18D280271C8540F3009F95B2 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		18D2800E1C8540F3009F95B2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D2800F1C8540F3009F95B2 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				18D280141C8540F3009F95B2 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		18D2802D1C8540F3009F95B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		18D2802E1C8540F3009F95B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		18D280301C8540F3009F95B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		18D280311C8540F3009F95B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowser;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		18D280331C8540F3009F95B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VRPictureBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VRPictureBrowser.app/VRPictureBrowser";
+			};
+			name = Debug;
+		};
+		18D280341C8540F3009F95B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = VRPictureBrowserTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowserTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/VRPictureBrowser.app/VRPictureBrowser";
+			};
+			name = Release;
+		};
+		18D280361C8540F3009F95B2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VRPictureBrowserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VRPictureBrowser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		18D280371C8540F3009F95B2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = VRPictureBrowserUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowserUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = VRPictureBrowser;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		18D27FFD1C8540F3009F95B2 /* Build configuration list for PBXProject "VRPictureBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D2802D1C8540F3009F95B2 /* Debug */,
+				18D2802E1C8540F3009F95B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		18D2802F1C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowser" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D280301C8540F3009F95B2 /* Debug */,
+				18D280311C8540F3009F95B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18D280321C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D280331C8540F3009F95B2 /* Debug */,
+				18D280341C8540F3009F95B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		18D280351C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				18D280361C8540F3009F95B2 /* Debug */,
+				18D280371C8540F3009F95B2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 18D27FFA1C8540F3009F95B2 /* Project object */;
+}
