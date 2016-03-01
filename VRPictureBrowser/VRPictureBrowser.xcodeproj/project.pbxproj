@@ -21,6 +21,12 @@
 		18D280411C855FB8009F95B2 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803C1C855FB8009F95B2 /* 4.jpg */; };
 		18D280421C855FB8009F95B2 /* 0.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803D1C855FB8009F95B2 /* 0.png */; };
 		18D280451C856784009F95B2 /* XW_ShowImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D280441C856784009F95B2 /* XW_ShowImageViewController.m */; };
+		18D280471C857A32009F95B2 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280461C857A32009F95B2 /* OpenGLES.framework */; };
+		18D280491C857A48009F95B2 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280481C857A48009F95B2 /* GLKit.framework */; };
+		18D2804B1C857A61009F95B2 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804A1C857A61009F95B2 /* CoreMotion.framework */; };
+		18D2804D1C857A78009F95B2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804C1C857A78009F95B2 /* CoreFoundation.framework */; };
+		18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */; };
+		18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280501C857A95009F95B2 /* UIKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +70,12 @@
 		18D2803D1C855FB8009F95B2 /* 0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 0.png; sourceTree = "<group>"; };
 		18D280431C856784009F95B2 /* XW_ShowImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_ShowImageViewController.h; sourceTree = "<group>"; };
 		18D280441C856784009F95B2 /* XW_ShowImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_ShowImageViewController.m; sourceTree = "<group>"; };
+		18D280461C857A32009F95B2 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		18D280481C857A48009F95B2 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		18D2804A1C857A61009F95B2 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		18D2804C1C857A78009F95B2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		18D280501C857A95009F95B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +83,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */,
+				18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */,
+				18D2804D1C857A78009F95B2 /* CoreFoundation.framework in Frameworks */,
+				18D2804B1C857A61009F95B2 /* CoreMotion.framework in Frameworks */,
+				18D280491C857A48009F95B2 /* GLKit.framework in Frameworks */,
+				18D280471C857A32009F95B2 /* OpenGLES.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,6 +112,12 @@
 		18D27FF91C8540F3009F95B2 = {
 			isa = PBXGroup;
 			children = (
+				18D280501C857A95009F95B2 /* UIKit.framework */,
+				18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */,
+				18D2804C1C857A78009F95B2 /* CoreFoundation.framework */,
+				18D2804A1C857A61009F95B2 /* CoreMotion.framework */,
+				18D280481C857A48009F95B2 /* GLKit.framework */,
+				18D280461C857A32009F95B2 /* OpenGLES.framework */,
 				18D280041C8540F3009F95B2 /* VRPictureBrowser */,
 				18D2801E1C8540F3009F95B2 /* VRPictureBrowserTests */,
 				18D280291C8540F3009F95B2 /* VRPictureBrowserUITests */,
