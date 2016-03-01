@@ -15,6 +15,11 @@
 		18D280151C8540F3009F95B2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */; };
 		18D280201C8540F3009F95B2 /* VRPictureBrowserTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2801F1C8540F3009F95B2 /* VRPictureBrowserTests.m */; };
 		18D2802B1C8540F3009F95B2 /* VRPictureBrowserUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 18D2802A1C8540F3009F95B2 /* VRPictureBrowserUITests.m */; };
+		18D2803E1C855FB8009F95B2 /* 1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D280391C855FB8009F95B2 /* 1.jpg */; };
+		18D2803F1C855FB8009F95B2 /* 2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803A1C855FB8009F95B2 /* 2.jpg */; };
+		18D280401C855FB8009F95B2 /* 3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803B1C855FB8009F95B2 /* 3.jpg */; };
+		18D280411C855FB8009F95B2 /* 4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803C1C855FB8009F95B2 /* 4.jpg */; };
+		18D280421C855FB8009F95B2 /* equirectangular-projection-lines.png in Resources */ = {isa = PBXBuildFile; fileRef = 18D2803D1C855FB8009F95B2 /* equirectangular-projection-lines.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +56,11 @@
 		18D280261C8540F3009F95B2 /* VRPictureBrowserUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = VRPictureBrowserUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		18D2802A1C8540F3009F95B2 /* VRPictureBrowserUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = VRPictureBrowserUITests.m; sourceTree = "<group>"; };
 		18D2802C1C8540F3009F95B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D280391C855FB8009F95B2 /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
+		18D2803A1C855FB8009F95B2 /* 2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2.jpg; sourceTree = "<group>"; };
+		18D2803B1C855FB8009F95B2 /* 3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 3.jpg; sourceTree = "<group>"; };
+		18D2803C1C855FB8009F95B2 /* 4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 4.jpg; sourceTree = "<group>"; };
+		18D2803D1C855FB8009F95B2 /* equirectangular-projection-lines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "equirectangular-projection-lines.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +111,7 @@
 		18D280041C8540F3009F95B2 /* VRPictureBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				18D280381C855FB8009F95B2 /* images */,
 				18D280081C8540F3009F95B2 /* AppDelegate.h */,
 				18D280091C8540F3009F95B2 /* AppDelegate.m */,
 				18D2800B1C8540F3009F95B2 /* ViewController.h */,
@@ -138,6 +149,18 @@
 				18D2802C1C8540F3009F95B2 /* Info.plist */,
 			);
 			path = VRPictureBrowserUITests;
+			sourceTree = "<group>";
+		};
+		18D280381C855FB8009F95B2 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				18D280391C855FB8009F95B2 /* 1.jpg */,
+				18D2803A1C855FB8009F95B2 /* 2.jpg */,
+				18D2803B1C855FB8009F95B2 /* 3.jpg */,
+				18D2803C1C855FB8009F95B2 /* 4.jpg */,
+				18D2803D1C855FB8009F95B2 /* equirectangular-projection-lines.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -244,6 +267,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D280151C8540F3009F95B2 /* LaunchScreen.storyboard in Resources */,
+				18D280411C855FB8009F95B2 /* 4.jpg in Resources */,
+				18D2803E1C855FB8009F95B2 /* 1.jpg in Resources */,
+				18D2803F1C855FB8009F95B2 /* 2.jpg in Resources */,
+				18D280401C855FB8009F95B2 /* 3.jpg in Resources */,
+				18D280421C855FB8009F95B2 /* equirectangular-projection-lines.png in Resources */,
 				18D280121C8540F3009F95B2 /* Assets.xcassets in Resources */,
 				18D280101C8540F3009F95B2 /* Main.storyboard in Resources */,
 			);
