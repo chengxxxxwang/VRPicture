@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  XW_ShowImageViewController.h
 //  VRPictureBrowser
 //
 //  Created by apple on 16/3/1.
@@ -8,11 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
-{
-    NSInteger _index;
-}
+@interface XW_ShowImageViewController : UIViewController
 
 @end
-
