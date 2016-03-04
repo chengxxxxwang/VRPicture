@@ -70,7 +70,49 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yul-Ri-Y9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1670.5" y="393.5"/>
+            <point key="canvasLocation" x="1672.5" y="393.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="RQu-Th-atM">
+            <objects>
+                <viewController id="5Fz-og-4cX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="B7J-l7-5Ou"/>
+                        <viewControllerLayoutGuide type="bottom" id="fKC-FW-T58"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hVD-R8-lEy">
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
+                                <rect key="frame" x="73" y="61" width="238" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-XR-q9Q">
+                                <rect key="frame" x="331" y="37" width="5" height="301"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="5" id="NAn-8M-Vlc"/>
+                                    <constraint firstAttribute="height" constant="301" id="NM1-DC-3DA"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
+                                <rect key="frame" x="355" y="61" width="238" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="yc7-XR-q9Q" firstAttribute="centerY" secondItem="hVD-R8-lEy" secondAttribute="centerY" id="i4u-ar-DfF"/>
+                            <constraint firstItem="yc7-XR-q9Q" firstAttribute="centerX" secondItem="hVD-R8-lEy" secondAttribute="centerX" id="mG4-xz-ZRB"/>
+                        </constraints>
+                    </view>
+                    <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-8y-740" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2366.5" y="393.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rXe-ib-EF0">
