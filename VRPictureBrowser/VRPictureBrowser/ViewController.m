@@ -8,10 +8,15 @@
 
 #import "ViewController.h"
 
+#import <CoreMotion/CoreMotion.h>
+
+
+
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
 
+@property (nonatomic) CMMotionManager *motionManager;
 
 @end
 
@@ -25,7 +30,25 @@
     
     [self.pictureImageView addGestureRecognizer:tap];
     
+    self.motionManager = [[CMMotionManager alloc] init];
+    
     self.pictureImageView.userInteractionEnabled = YES;
+    
+    [self MotionMoved];
+    
+}
+
+- (void)MotionMoved{
+
+    CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
+    
+    CGFloat accelerometerX = accelerometerData.acceleration.x;
+    CGFloat accelerometerY = accelerometerData.acceleration.y;
+    CGFloat accelerometerZ = accelerometerData.acceleration.z;
+    
+    NSLog(@"%f,%f,%f",accelerometerX,accelerometerY,accelerometerZ);
+    
+    
 }
 
 - (void)tapAction{
@@ -38,6 +61,7 @@
     
     [self NestPic];
     
+    [self MotionMoved];
 }
 
 - (void)NestPic{

@@ -260,6 +260,7 @@
 				TargetAttributes = {
 					18D280011C8540F3009F95B2 = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = 7H5BBPFH5T;
 					};
 					18D2801A1C8540F3009F95B2 = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -470,6 +471,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowser;
@@ -481,6 +483,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.papatv.www.VRPictureBrowser;
@@ -555,6 +558,7 @@
 				18D280311C8540F3009F95B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D280321C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserTests" */ = {
 			isa = XCConfigurationList;
@@ -563,6 +567,7 @@
 				18D280341C8540F3009F95B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		18D280351C8540F3009F95B2 /* Build configuration list for PBXNativeTarget "VRPictureBrowserUITests" */ = {
 			isa = XCConfigurationList;
@@ -571,6 +576,7 @@
 				18D280371C8540F3009F95B2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
