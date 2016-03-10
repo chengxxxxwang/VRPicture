@@ -27,6 +27,7 @@
 		18D2804D1C857A78009F95B2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804C1C857A78009F95B2 /* CoreFoundation.framework */; };
 		18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */; };
 		18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280501C857A95009F95B2 /* UIKit.framework */; };
+		4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722DEB91C917911006931A7 /* PanoramaView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,8 @@
 		18D2804C1C857A78009F95B2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18D280501C857A95009F95B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		4722DEB81C917911006931A7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
+		4722DEB91C917911006931A7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,12 +115,6 @@
 		18D27FF91C8540F3009F95B2 = {
 			isa = PBXGroup;
 			children = (
-				18D280501C857A95009F95B2 /* UIKit.framework */,
-				18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */,
-				18D2804C1C857A78009F95B2 /* CoreFoundation.framework */,
-				18D2804A1C857A61009F95B2 /* CoreMotion.framework */,
-				18D280481C857A48009F95B2 /* GLKit.framework */,
-				18D280461C857A32009F95B2 /* OpenGLES.framework */,
 				18D280041C8540F3009F95B2 /* VRPictureBrowser */,
 				18D2801E1C8540F3009F95B2 /* VRPictureBrowserTests */,
 				18D280291C8540F3009F95B2 /* VRPictureBrowserUITests */,
@@ -138,6 +135,7 @@
 		18D280041C8540F3009F95B2 /* VRPictureBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				4722DEB71C917785006931A7 /* FrameWorks */,
 				18D280381C855FB8009F95B2 /* images */,
 				18D280081C8540F3009F95B2 /* AppDelegate.h */,
 				18D280091C8540F3009F95B2 /* AppDelegate.m */,
@@ -145,6 +143,8 @@
 				18D2800C1C8540F3009F95B2 /* ViewController.m */,
 				18D280431C856784009F95B2 /* XW_ShowImageViewController.h */,
 				18D280441C856784009F95B2 /* XW_ShowImageViewController.m */,
+				4722DEB81C917911006931A7 /* PanoramaView.h */,
+				4722DEB91C917911006931A7 /* PanoramaView.m */,
 				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
 				18D280111C8540F3009F95B2 /* Assets.xcassets */,
 				18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */,
@@ -190,6 +190,19 @@
 				18D2803D1C855FB8009F95B2 /* 0.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		4722DEB71C917785006931A7 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				18D280501C857A95009F95B2 /* UIKit.framework */,
+				18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */,
+				18D2804C1C857A78009F95B2 /* CoreFoundation.framework */,
+				18D2804A1C857A61009F95B2 /* CoreMotion.framework */,
+				18D280481C857A48009F95B2 /* GLKit.framework */,
+				18D280461C857A32009F95B2 /* OpenGLES.framework */,
+			);
+			path = FrameWorks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +345,7 @@
 				18D280451C856784009F95B2 /* XW_ShowImageViewController.m in Sources */,
 				18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */,
 				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
+				4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */,
 				18D280071C8540F3009F95B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
