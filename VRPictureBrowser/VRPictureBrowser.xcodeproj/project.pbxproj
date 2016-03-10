@@ -112,12 +112,6 @@
 		18D27FF91C8540F3009F95B2 = {
 			isa = PBXGroup;
 			children = (
-				18D280501C857A95009F95B2 /* UIKit.framework */,
-				18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */,
-				18D2804C1C857A78009F95B2 /* CoreFoundation.framework */,
-				18D2804A1C857A61009F95B2 /* CoreMotion.framework */,
-				18D280481C857A48009F95B2 /* GLKit.framework */,
-				18D280461C857A32009F95B2 /* OpenGLES.framework */,
 				18D280041C8540F3009F95B2 /* VRPictureBrowser */,
 				18D2801E1C8540F3009F95B2 /* VRPictureBrowserTests */,
 				18D280291C8540F3009F95B2 /* VRPictureBrowserUITests */,
@@ -138,6 +132,7 @@
 		18D280041C8540F3009F95B2 /* VRPictureBrowser */ = {
 			isa = PBXGroup;
 			children = (
+				4722DEB71C917785006931A7 /* FrameWorks */,
 				18D280381C855FB8009F95B2 /* images */,
 				18D280081C8540F3009F95B2 /* AppDelegate.h */,
 				18D280091C8540F3009F95B2 /* AppDelegate.m */,
@@ -190,6 +185,19 @@
 				18D2803D1C855FB8009F95B2 /* 0.png */,
 			);
 			path = images;
+			sourceTree = "<group>";
+		};
+		4722DEB71C917785006931A7 /* FrameWorks */ = {
+			isa = PBXGroup;
+			children = (
+				18D280501C857A95009F95B2 /* UIKit.framework */,
+				18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */,
+				18D2804C1C857A78009F95B2 /* CoreFoundation.framework */,
+				18D2804A1C857A61009F95B2 /* CoreMotion.framework */,
+				18D280481C857A48009F95B2 /* GLKit.framework */,
+				18D280461C857A32009F95B2 /* OpenGLES.framework */,
+			);
+			path = FrameWorks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
