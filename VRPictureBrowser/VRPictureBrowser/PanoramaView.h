@@ -9,6 +9,7 @@
  *
  * @discussion a dynamic GLKView with a touch and motion sensor interface to align and immerse the perspective inside an equirectangular panorama projection
  */
+
 @interface PanoramaView : GLKView
 
 

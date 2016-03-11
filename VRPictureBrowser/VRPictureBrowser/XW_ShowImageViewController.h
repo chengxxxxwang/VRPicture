@@ -7,7 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <GLKit/GLKit.h>
 
-@interface XW_ShowImageViewController : UIViewController
+
+#import "PanoramaView.h"
+
+
+@interface XW_ShowImageViewController : GLKViewController
 
 @end
