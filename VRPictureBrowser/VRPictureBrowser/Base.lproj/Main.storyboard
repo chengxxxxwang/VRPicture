@@ -70,9 +70,12 @@
                                 <state key="normal" title="PickImage">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="pickimageButton:" destination="uzh-1G-bIf" eventType="touchUpInside" id="UPx-gt-ziC"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84e-vU-IUN">
-                                <rect key="frame" x="50" y="265.5" width="274" height="137"/>
+                                <rect key="frame" x="50" y="265" width="274" height="137"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="84e-vU-IUN" secondAttribute="height" multiplier="16:8" id="fTn-KG-zWa"/>
                                 </constraints>
@@ -88,6 +91,9 @@
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="imageView" destination="84e-vU-IUN" id="pEF-Ju-Rqv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yul-Ri-Y9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

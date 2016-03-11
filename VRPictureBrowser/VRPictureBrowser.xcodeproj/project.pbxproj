@@ -28,6 +28,7 @@
 		18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */; };
 		18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280501C857A95009F95B2 /* UIKit.framework */; };
 		4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722DEB91C917911006931A7 /* PanoramaView.m */; };
+		47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C573B31C92A6A80080C2F6 /* XW_ViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -79,6 +80,8 @@
 		18D280501C857A95009F95B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4722DEB81C917911006931A7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
 		4722DEB91C917911006931A7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
+		47C573B21C92A6A80080C2F6 /* XW_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_ViewController.h; sourceTree = "<group>"; };
+		47C573B31C92A6A80080C2F6 /* XW_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_ViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +148,8 @@
 				18D280441C856784009F95B2 /* XW_ShowImageViewController.m */,
 				4722DEB81C917911006931A7 /* PanoramaView.h */,
 				4722DEB91C917911006931A7 /* PanoramaView.m */,
+				47C573B21C92A6A80080C2F6 /* XW_ViewController.h */,
+				47C573B31C92A6A80080C2F6 /* XW_ViewController.m */,
 				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
 				18D280111C8540F3009F95B2 /* Assets.xcassets */,
 				18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */,
@@ -345,6 +350,7 @@
 				18D280451C856784009F95B2 /* XW_ShowImageViewController.m in Sources */,
 				18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */,
 				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
+				47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */,
 				4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */,
 				18D280071C8540F3009F95B2 /* main.m in Sources */,
 			);
