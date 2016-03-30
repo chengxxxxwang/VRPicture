@@ -12,4 +12,6 @@
 
 @interface XW_ViewController : GLKViewController
 
+@property (nonatomic,strong) NSString *picName;
+
 @end

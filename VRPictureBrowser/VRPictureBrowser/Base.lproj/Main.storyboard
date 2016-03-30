@@ -33,13 +33,24 @@
                                     <constraint firstAttribute="width" secondItem="Lty-vW-C37" secondAttribute="height" multiplier="2:1" id="rWZ-HM-Tgk"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7eU-8x-jum">
+                                <rect key="frame" x="137" y="517" width="101" height="30"/>
+                                <state key="normal" title="PanoramaView">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showPanoramaView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g65-53-uPA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="7eU-8x-jum" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="1Wc-1l-20Q"/>
                             <constraint firstItem="7NK-OF-IXQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2Ij-s7-1Lr"/>
                             <constraint firstItem="7NK-OF-IXQ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-150" id="6yz-Fh-jDE"/>
                             <constraint firstItem="Lty-vW-C37" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="FUH-S9-QvB"/>
                             <constraint firstItem="Lty-vW-C37" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="YEo-eZ-s0J"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="7eU-8x-jum" secondAttribute="bottom" constant="120" id="gw8-mU-w51"/>
                             <constraint firstAttribute="trailing" secondItem="Lty-vW-C37" secondAttribute="trailing" constant="50" id="lsa-3a-c0l"/>
                         </constraints>
                     </view>

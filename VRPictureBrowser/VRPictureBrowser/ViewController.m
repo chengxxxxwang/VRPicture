@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-
+#import "XW_ViewController.h"
 #import <CoreMotion/CoreMotion.h>
 
 @interface ViewController ()
@@ -87,6 +87,19 @@
     self.pictureImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"%@",name]];
     
 }
+
+
+
+- (IBAction)showPanoramaView:(id)sender {
+    
+    XW_ViewController *panoramaView = [XW_ViewController new];
+    
+    panoramaView.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
+    
+    [self.navigationController pushViewController:panoramaView animated:YES];
+    
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
