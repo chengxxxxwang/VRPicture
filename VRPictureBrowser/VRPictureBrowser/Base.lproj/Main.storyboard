@@ -64,10 +64,10 @@
             </objects>
             <point key="canvasLocation" x="1032.5" y="393.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Eyes View Controller-->
         <scene sceneID="RQu-Th-atM">
             <objects>
-                <viewController id="5Fz-og-4cX" sceneMemberID="viewController">
+                <viewController id="5Fz-og-4cX" customClass="XW_EyesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B7J-l7-5Ou"/>
                         <viewControllerLayoutGuide type="bottom" id="fKC-FW-T58"/>
@@ -84,12 +84,12 @@
                                     <constraint firstAttribute="height" constant="301" id="NM1-DC-3DA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf" customClass="PanoramaView">
-                                <rect key="frame" x="355" y="61" width="238" height="235"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
+                                <rect key="frame" x="73" y="61" width="238" height="235"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy" customClass="PanoramaView">
-                                <rect key="frame" x="73" y="61" width="238" height="235"/>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
+                                <rect key="frame" x="355" y="61" width="238" height="235"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
@@ -101,6 +101,10 @@
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="leftEyeVisionView" destination="sAO-PY-SRy" id="Zod-q6-64V"/>
+                        <outlet property="rightEyeVisionView" destination="48J-bS-ATf" id="B3Z-tT-Utw"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-8y-740" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
