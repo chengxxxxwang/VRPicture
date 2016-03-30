@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="uzh-1G-bIf">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="efE-CA-xDj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -53,52 +53,6 @@
             </objects>
             <point key="canvasLocation" x="1032.5" y="393.5"/>
         </scene>
-        <!--Show Image View Controller-->
-        <scene sceneID="F5F-Zs-Vlx">
-            <objects>
-                <viewController id="uzh-1G-bIf" customClass="XW_ShowImageViewController" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="OwE-vv-gIB"/>
-                        <viewControllerLayoutGuide type="bottom" id="oFl-IR-ptY"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="owS-6y-asM">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PMK-bz-FHg">
-                                <rect key="frame" x="152" y="140" width="71" height="30"/>
-                                <state key="normal" title="PickImage">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pickimageButton:" destination="uzh-1G-bIf" eventType="touchUpInside" id="UPx-gt-ziC"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="84e-vU-IUN">
-                                <rect key="frame" x="50" y="265" width="274" height="137"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="84e-vU-IUN" secondAttribute="height" multiplier="16:8" id="fTn-KG-zWa"/>
-                                </constraints>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.40000000600000002" green="1" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="84e-vU-IUN" firstAttribute="leading" secondItem="owS-6y-asM" secondAttribute="leading" constant="50" id="CbP-cG-IPH"/>
-                            <constraint firstItem="PMK-bz-FHg" firstAttribute="centerX" secondItem="owS-6y-asM" secondAttribute="centerX" id="YGB-XB-r6o"/>
-                            <constraint firstItem="84e-vU-IUN" firstAttribute="centerX" secondItem="owS-6y-asM" secondAttribute="centerX" id="YaO-gv-rJh"/>
-                            <constraint firstItem="PMK-bz-FHg" firstAttribute="top" secondItem="OwE-vv-gIB" secondAttribute="bottom" constant="120" id="ZDo-vF-znl"/>
-                            <constraint firstItem="84e-vU-IUN" firstAttribute="centerY" secondItem="owS-6y-asM" secondAttribute="centerY" id="lNf-LW-PJJ"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="imageView" destination="84e-vU-IUN" id="pEF-Ju-Rqv"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="yul-Ri-Y9v" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1672.5" y="393.5"/>
-        </scene>
         <!--View Controller-->
         <scene sceneID="RQu-Th-atM">
             <objects>
@@ -111,10 +65,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
-                                <rect key="frame" x="73" y="61" width="238" height="235"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yc7-XR-q9Q">
                                 <rect key="frame" x="331" y="37" width="5" height="301"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -123,8 +73,12 @@
                                     <constraint firstAttribute="height" constant="301" id="NM1-DC-3DA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf" customClass="PanoramaView">
                                 <rect key="frame" x="355" y="61" width="238" height="235"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy" customClass="PanoramaView">
+                                <rect key="frame" x="73" y="61" width="238" height="235"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
