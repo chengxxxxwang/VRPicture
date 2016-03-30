@@ -27,6 +27,7 @@
 		18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */; };
 		18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280501C857A95009F95B2 /* UIKit.framework */; };
 		4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722DEB91C917911006931A7 /* PanoramaView.m */; };
+		475AD6381CABBFFF00A6A681 /* XW_EyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */; };
 		47B77B581C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif in Resources */ = {isa = PBXBuildFile; fileRef = 47B77B571C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif */; };
 		47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47C573B31C92A6A80080C2F6 /* XW_ViewController.m */; };
 /* End PBXBuildFile section */
@@ -78,6 +79,8 @@
 		18D280501C857A95009F95B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		4722DEB81C917911006931A7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
 		4722DEB91C917911006931A7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
+		475AD6361CABBFFF00A6A681 /* XW_EyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_EyesViewController.h; sourceTree = "<group>"; };
+		475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_EyesViewController.m; sourceTree = "<group>"; };
 		47B77B571C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "IK1Y[0A~$K]A_LN2HA`OTAH.gif"; sourceTree = "<group>"; };
 		47C573B21C92A6A80080C2F6 /* XW_ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_ViewController.h; sourceTree = "<group>"; };
 		47C573B31C92A6A80080C2F6 /* XW_ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_ViewController.m; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				4722DEB91C917911006931A7 /* PanoramaView.m */,
 				47C573B21C92A6A80080C2F6 /* XW_ViewController.h */,
 				47C573B31C92A6A80080C2F6 /* XW_ViewController.m */,
+				475AD6361CABBFFF00A6A681 /* XW_EyesViewController.h */,
+				475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */,
 				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
 				18D280111C8540F3009F95B2 /* Assets.xcassets */,
 				18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */,
@@ -347,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */,
+				475AD6381CABBFFF00A6A681 /* XW_EyesViewController.m in Sources */,
 				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
 				47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */,
 				4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */,
