@@ -10,8 +10,6 @@
 
 #import <CoreMotion/CoreMotion.h>
 
-
-
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
