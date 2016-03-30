@@ -7,8 +7,11 @@
 //
 
 #import "XW_ViewController.h"
+#import "PanoramaView.h"
 
-@interface XW_ViewController ()
+@interface XW_ViewController (){
+    PanoramaView *panoramaView;
+}
 
 @end
 
@@ -17,7 +20,39 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    
+    [self layoutPanoramaView];
+    
+}
+
+
+#pragma mark -
+#pragma mark - panoramaView
+#pragma mark -
+
+- (void)layoutPanoramaView{
+
+    panoramaView = [[PanoramaView alloc] init];
+    [panoramaView setImage:_picName];
+    [panoramaView setOrientToDevice:YES];
+    [panoramaView setTouchToPan:NO];
+    [panoramaView setPinchToZoom:YES];
+    [panoramaView setShowTouches:NO];
+    [self setView:panoramaView];
+    
+}
+
+-(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{
+    [panoramaView draw];
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
