@@ -9,6 +9,7 @@
 #import "XW_EyesViewController.h"
 #import "PanoramaView.h"
 
+
 @interface XW_EyesViewController (){
 
     PanoramaView *panoramaView;
@@ -39,6 +40,11 @@
 //    [self setView:panoramaView];
 
     [self.leftEyeVisionView setMaskView:panoramaView];
+    
+    
+    
+    
+    
 }
 
 - (void)layoutRightView{
