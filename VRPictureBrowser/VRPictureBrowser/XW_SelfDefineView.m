@@ -321,13 +321,42 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
                                    a.m12,  a.m22, -a.m32, 0.0f,
                                     0.0f,   0.0f,   0.0f, 1.0f);
             
-        }
+        }else if (SENSOR_ORIENTATION == 1){
         
+            return GLKMatrix4Make( a.m11,  a.m21, a.m31, 0.0f,
+                                   a.m13,  a.m23, a.m33, 0.0f,
+                                  -a.m12, -a.m22,-a.m32, 0.0f,
+                                   0.0f ,  0.0f , 0.0f , 1.0f);
+            
+        }
         
     }
 
     
     return GLKMatrix4Identity;
+}
+
+
+- (void) orientToVector:(GLKVector3)v{
+    
+    _attitudeMartrix = GLKMatrix4MakeLookAt(0, 0, 0, v.x, v.y, v.z,  0, 1, 0);
+    
+}
+
+- (void) orientToAzimuth:(float)azimuth Altitude:(float)altitude{
+    
+    [self orientToVector:GLKVector3Make(-cosf(azimuth), sinf(altitude), sinf(azimuth))];
+    
+}
+
+- (void) updateLook{
+
+    _lookVector = GLKVector3Make(-_attitudeMartrix.m02,
+                                 -_attitudeMartrix.m12,
+                                 -_attitudeMartrix.m22);
+    _lookAzimuth = atan2f(_lookVector.x, -_lookVector.z);
+    _lookAltitude = asinf(_lookVector.y);
+    
 }
 
 
