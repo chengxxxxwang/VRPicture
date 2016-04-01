@@ -19,6 +19,8 @@
 
 #define PI 3.1415926535898
 
+#define SENSOR_ORIENTATION [[UIApplication sharedApplication] statusBarOrientation]
+
 GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     GLKVector3 w = GLKVector3CrossProduct(u, v);
     GLKQuaternion q = GLKQuaternionMake(w.x, w.y, w.z, GLKVector3DotProduct(u, v));
@@ -289,7 +291,44 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 #pragma mark - 设备定向
 #pragma mark -
 
+- (GLKMatrix4) getDeviceOrientationMatrix{
 
+    if (_orientToDevice && [motionManager isDeviceMotionActive]) {
+        
+        CMRotationMatrix a = [[[motionManager deviceMotion] attitude] rotationMatrix];
+        
+//        1(NORTH)  2(SOUTH)  3(EAST)  4(WEST)
+        
+        if (SENSOR_ORIENTATION == 4) {
+            
+            return GLKMatrix4Make( a.m21, -a.m11,  a.m31, 0.0f,
+                                   a.m23, -a.m13,  a.m33, 0.0f,
+                                  -a.m22,  a.m12, -a.m32, 0.0f,
+                                    0.0f,   0.0f,   0.0f, 1.0f);
+            
+        }else if (SENSOR_ORIENTATION == 3){
+        
+            
+            return GLKMatrix4Make(-a.m21,  a.m11,  a.m31, 0.0f,
+                                   a.m23, -a.m13,  a.m33, 0.0f,
+                                   a.m22, -a.m12, -a.m32, 0.0f,
+                                    0.0f,   0.0f,   0.0f, 1.0f);
+            
+        }else if (SENSOR_ORIENTATION == 2){
+        
+            return GLKMatrix4Make(-a.m11, -a.m21,  a.m31, 0.0f,
+                                  -a.m13, -a.m23,  a.m33, 0.0f,
+                                   a.m12,  a.m22, -a.m32, 0.0f,
+                                    0.0f,   0.0f,   0.0f, 1.0f);
+            
+        }
+        
+        
+    }
+
+    
+    return GLKMatrix4Identity;
+}
 
 
 
