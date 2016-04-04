@@ -43,8 +43,6 @@
     
     
     
-    
-    
 }
 
 - (void)layoutRightView{
