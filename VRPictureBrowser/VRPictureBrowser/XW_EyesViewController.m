@@ -2,13 +2,15 @@
 
 #import "XW_EyesViewController.h"
 #import "PanoramaView.h"
-
+#import "XW_ViewController.h"
 
 @interface XW_EyesViewController (){
 
     PanoramaView *leftPanoramaView;
     PanoramaView *rightPanoramaView;
-
+    
+    XW_ViewController *leftView;
+    XW_ViewController *rightView;
 }
 
 @end
@@ -20,11 +22,32 @@
     // Do any additional setup after loading the view.
     
 //    [self layoutLeftView];
-    [self layoutRightView];
+//    [self layoutRightView];
+ 
+
     
-    self.view.userInteractionEnabled = YES;
     
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    
+    rightView = [XW_ViewController new];
+    rightView.picName = @"4.jpg";
+    rightView.view.frame = rightPanoramaView.frame;
+    [self addChildViewController:rightView];
+
+    
+    leftView = [XW_ViewController new];
+    leftView.picName = @"4.jpg";
+    leftView.view.frame = leftPanoramaView.frame;
+    [self addChildViewController:leftView];
+    
+    
+}
+
+
 
 - (void)layoutLeftView{
     
@@ -34,7 +57,7 @@
     
     leftPanoramaView.center = self.leftEyeVisionView.center;
     
-    [leftPanoramaView setImage:@"1.jpg"];
+    [leftPanoramaView setImage:@"2.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
@@ -63,6 +86,8 @@
     [self.rightEyeVisionView addSubview:rightPanoramaView];
     
 }
+
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

@@ -52,7 +52,8 @@
     
     XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
     
-    [self.navigationController pushViewController:EyesVC animated:YES];
+//    [self.navigationController pushViewController:EyesVC animated:YES];
+    [self presentViewController:EyesVC animated:YES completion:nil];
     
 }
 
@@ -65,7 +66,7 @@
 
 - (void)NestPic{
     
-    if (_index >= 4) {
+    if (_index >= 5) {
         _index = 1;
     }
     
@@ -98,6 +99,7 @@
     panoramaView.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
     
     [self.navigationController pushViewController:panoramaView animated:YES];
+    
     
 }
 

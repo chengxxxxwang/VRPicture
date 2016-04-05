@@ -1,4 +1,21 @@
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #import "XW_ViewController.h"
 #import "PanoramaView.h"
 
@@ -20,6 +37,10 @@
 - (void)viewWillAppear:(BOOL)animated{
 
     [super viewWillAppear:animated];
+    
+    if (!self.picName) {
+        self.picName = @"4.jpg";
+    }
     
     [self layoutPanoramaView];
     
