@@ -30,26 +30,31 @@
 }
 
 - (void)layoutLeftView{
-
-    panoramaView = [[PanoramaView alloc] init];
+    
+    CGRect frame = self.leftEyeVisionView.frame;
+    
+    panoramaView = [[PanoramaView alloc] initWithFrame:frame];
     [panoramaView setImage:@"1.jpg"];
     [panoramaView setOrientToDevice:YES];
     [panoramaView setTouchToPan:YES];
     [panoramaView setPinchToZoom:YES];
     [panoramaView setShowTouches:NO];
+    
 //    [self setView:panoramaView];
 
 //    [self.leftEyeVisionView setMaskView:panoramaView];
     
-//    [self.leftEyeVisionView addSubview:panoramaView];
+    [self.leftEyeVisionView addSubview:panoramaView];
     
-    [self setView:panoramaView];
+//    [self.leftEyeVisionView setView:panoramaView];
     
 }
 
 - (void)layoutRightView{
 
-    panoramaView = [[PanoramaView alloc] init];
+    CGRect frame = self.rightEyeVisionView.frame;
+    
+    panoramaView = [[PanoramaView alloc] initWithFrame:frame];
     [panoramaView setImage:@"1.jpg"];
     [panoramaView setOrientToDevice:YES];
     [panoramaView setTouchToPan:YES];
