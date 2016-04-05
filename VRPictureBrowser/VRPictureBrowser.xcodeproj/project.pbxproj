@@ -26,7 +26,6 @@
 		18D2804D1C857A78009F95B2 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804C1C857A78009F95B2 /* CoreFoundation.framework */; };
 		18D2804F1C857A8B009F95B2 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */; };
 		18D280511C857A95009F95B2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18D280501C857A95009F95B2 /* UIKit.framework */; };
-		471C52231CACF806008CEFBA /* XW_SelfDefineView.m in Sources */ = {isa = PBXBuildFile; fileRef = 471C52221CACF806008CEFBA /* XW_SelfDefineView.m */; };
 		4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4722DEB91C917911006931A7 /* PanoramaView.m */; };
 		475AD6381CABBFFF00A6A681 /* XW_EyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */; };
 		47B77B581C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif in Resources */ = {isa = PBXBuildFile; fileRef = 47B77B571C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif */; };
@@ -78,8 +77,6 @@
 		18D2804C1C857A78009F95B2 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
 		18D2804E1C857A8B009F95B2 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		18D280501C857A95009F95B2 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		471C52211CACF806008CEFBA /* XW_SelfDefineView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_SelfDefineView.h; sourceTree = "<group>"; };
-		471C52221CACF806008CEFBA /* XW_SelfDefineView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_SelfDefineView.m; sourceTree = "<group>"; };
 		4722DEB81C917911006931A7 /* PanoramaView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PanoramaView.h; sourceTree = "<group>"; };
 		4722DEB91C917911006931A7 /* PanoramaView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PanoramaView.m; sourceTree = "<group>"; };
 		475AD6361CABBFFF00A6A681 /* XW_EyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_EyesViewController.h; sourceTree = "<group>"; };
@@ -156,8 +153,6 @@
 				47C573B31C92A6A80080C2F6 /* XW_ViewController.m */,
 				475AD6361CABBFFF00A6A681 /* XW_EyesViewController.h */,
 				475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */,
-				471C52211CACF806008CEFBA /* XW_SelfDefineView.h */,
-				471C52221CACF806008CEFBA /* XW_SelfDefineView.m */,
 				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
 				18D280111C8540F3009F95B2 /* Assets.xcassets */,
 				18D280131C8540F3009F95B2 /* LaunchScreen.storyboard */,
@@ -357,7 +352,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				18D2800D1C8540F3009F95B2 /* ViewController.m in Sources */,
-				471C52231CACF806008CEFBA /* XW_SelfDefineView.m in Sources */,
 				475AD6381CABBFFF00A6A681 /* XW_EyesViewController.m in Sources */,
 				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
 				47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */,
@@ -504,6 +498,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VRPictureBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -518,6 +513,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = VRPictureBrowser/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = VRPictureBrowser;
 				PRODUCT_NAME = "$(TARGET_NAME)";
