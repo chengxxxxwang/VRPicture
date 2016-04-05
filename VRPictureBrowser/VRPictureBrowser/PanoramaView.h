@@ -1,15 +1,5 @@
 #import <Foundation/Foundation.h>
 
-/**
- * @class Panorama View
- * @author Robby Kraft
- * @date 8/24/13
- *
- * @availability iOS (5.0 and later)
- *
- * @discussion a dynamic GLKView with a touch and motion sensor interface to align and immerse the perspective inside an equirectangular panorama projection
- */
-
 @interface PanoramaView : GLKView
 
 

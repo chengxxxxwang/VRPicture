@@ -72,7 +72,7 @@
 - (void)NestPic{
     
     if (_index >= 4) {
-        _index = 0;
+        _index = 1;
     }
     
     [self pickImageWithNumber:_index];

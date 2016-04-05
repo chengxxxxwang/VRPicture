@@ -12,7 +12,8 @@
 
 @interface XW_EyesViewController (){
 
-    PanoramaView *panoramaView;
+    PanoramaView *leftPanoramaView;
+    PanoramaView *rightPanoramaView;
 
 }
 
@@ -24,8 +25,10 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self layoutLeftView];
+//    [self layoutLeftView];
     [self layoutRightView];
+    
+    self.view.userInteractionEnabled = YES;
     
 }
 
@@ -33,20 +36,19 @@
     
     CGRect frame = self.leftEyeVisionView.frame;
     
-    panoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    [panoramaView setImage:@"1.jpg"];
-    [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:YES];
-    [panoramaView setPinchToZoom:YES];
-    [panoramaView setShowTouches:NO];
+    leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-//    [self setView:panoramaView];
+    leftPanoramaView.center = self.leftEyeVisionView.center;
+    
+    [leftPanoramaView setImage:@"1.jpg"];
+    [leftPanoramaView setOrientToDevice:YES];
+    [leftPanoramaView setTouchToPan:YES];
+    [leftPanoramaView setPinchToZoom:YES];
+    [leftPanoramaView setShowTouches:YES];
+    
+    [self.leftEyeVisionView addSubview:leftPanoramaView];
+    
 
-//    [self.leftEyeVisionView setMaskView:panoramaView];
-    
-    [self.leftEyeVisionView addSubview:panoramaView];
-    
-//    [self.leftEyeVisionView setView:panoramaView];
     
 }
 
@@ -54,17 +56,17 @@
 
     CGRect frame = self.rightEyeVisionView.frame;
     
-    panoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    [panoramaView setImage:@"1.jpg"];
-    [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:YES];
-    [panoramaView setPinchToZoom:YES];
-    [panoramaView setShowTouches:NO];
-    //    [self setView:panoramaView];
+    rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-//    [self.rightEyeVisionView setMaskView:panoramaView];
+    rightPanoramaView.center = self.rightEyeVisionView.center;
     
-    [self.rightEyeVisionView addSubview:panoramaView];
+    [rightPanoramaView setImage:@"1.jpg"];
+    [rightPanoramaView setOrientToDevice:YES];
+    [rightPanoramaView setTouchToPan:YES];
+    [rightPanoramaView setPinchToZoom:YES];
+    [rightPanoramaView setShowTouches:YES];
+    
+    [self.rightEyeVisionView addSubview:rightPanoramaView];
     
 }
 
