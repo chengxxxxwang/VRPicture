@@ -1,10 +1,4 @@
-//
-//  XW_EyesViewController.m
-//  VRPictureBrowser
-//
-//  Created by chenxingwang on 16/3/30.
-//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
-//
+
 
 #import "XW_EyesViewController.h"
 #import "PanoramaView.h"

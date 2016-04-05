@@ -1,10 +1,3 @@
-//
-//  XW_ViewController.m
-//  VRPictureBrowser
-//
-//  Created by chenxingwang on 16/3/11.
-//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
-//
 
 #import "XW_ViewController.h"
 #import "PanoramaView.h"
