@@ -340,7 +340,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 - (void) orientToVector:(GLKVector3)v{
     
     _attitudeMartrix = GLKMatrix4MakeLookAt(0, 0, 0, v.x, v.y, v.z,  0, 1, 0);
-    
+    [self updateLook];
 }
 
 - (void) orientToAzimuth:(float)azimuth Altitude:(float)altitude{
@@ -348,6 +348,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     [self orientToVector:GLKVector3Make(-cosf(azimuth), sinf(altitude), sinf(azimuth))];
     
 }
+
 
 - (void) updateLook{
 
@@ -357,6 +358,54 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     _lookAzimuth = atan2f(_lookVector.x, -_lookVector.z);
     _lookAltitude = asinf(_lookVector.y);
     
+}
+
+- (CGPoint) imagePixelAtScreenLocation:(CGPoint)point{
+    return [self imagePixelFromVector:[self vectorFromScreenLocation:point inAttitude:_attitudeMartrix]];
+}
+-(CGPoint) imagePixelFromVector:(GLKVector3)vector{
+    CGPoint pxl = CGPointMake((M_PI-atan2f(-vector.z, -vector.x))/(2*M_PI), acosf(vector.y)/M_PI);
+    CGPoint tex = [sphere getTextureSize];
+    // if no texture exists, returns between 0.0 - 1.0
+    if(!(tex.x == 0.0f && tex.y == 0.0f)){
+        pxl.x *= tex.x;
+        pxl.y *= tex.y;
+    }
+    return pxl;
+}
+- (GLKVector3) vectorFromScreenLocation:(CGPoint)point{
+    
+    return [self vectorFromScreenLocation:point inAttitude:_attitudeMartrix];
+    
+}
+- (GLKVector3) vectorFromScreenLocation:(CGPoint)point inAttitude:(GLKMatrix4)matrix{
+    
+    GLKMatrix4 inverse = GLKMatrix4Invert(GLKMatrix4Multiply(_projectionMatrix, matrix), nil);
+    GLKVector4 screen = GLKVector4Make(2.0*(point.x/self.frame.size.width-.5),
+                                       2.0*(.5-point.y/self.frame.size.height),
+                                       1.0, 1.0);
+    GLKVector4 vec = GLKMatrix4MultiplyVector4(inverse, screen);
+    return GLKVector3Normalize(GLKVector3Make(vec.x, vec.y, vec.z));
+}
+
+- (CGPoint) screenLocationFromVector:(GLKVector3)vector{
+    GLKMatrix4 matrix = GLKMatrix4Multiply(_projectionMatrix, _attitudeMartrix);
+    GLKVector3 screenVector = GLKMatrix4MultiplyVector3(matrix, vector);
+    return CGPointMake( (screenVector.x/screenVector.z/2.0 + 0.5) * self.frame.size.width,
+                       (0.5-screenVector.y/screenVector.z/2) * self.frame.size.height );
+}
+- (BOOL) computeScreenLocation:(CGPoint*)location fromVector:(GLKVector3)vector inAttitude:(GLKMatrix4)matrix{
+    //This method returns whether the point is before or behind the screen.
+    GLKVector4 screenVector;
+    GLKVector4 vector4;
+    if(location == NULL)
+        return NO;
+    matrix = GLKMatrix4Multiply(_projectionMatrix, matrix);
+    vector4 = GLKVector4Make(vector.x, vector.y, vector.z, 1);
+    screenVector = GLKMatrix4MultiplyVector4(matrix, vector4);
+    location->x = (screenVector.x/screenVector.w/2.0 + 0.5) * self.frame.size.width;
+    location->y = (0.5-screenVector.y/screenVector.w/2) * self.frame.size.height;
+    return (screenVector.z >= 0);
 }
 
 

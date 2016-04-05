@@ -236,7 +236,8 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     _lookAzimuth = atan2f(_lookVector.x, -_lookVector.z);
     _lookAltitude = asinf(_lookVector.y);
 }
--(CGPoint) imagePixelAtScreenLocation:(CGPoint)point{
+
+- (CGPoint) imagePixelAtScreenLocation:(CGPoint)point{
     return [self imagePixelFromVector:[self vectorFromScreenLocation:point inAttitude:_attitudeMatrix]];
 }
 -(CGPoint) imagePixelFromVector:(GLKVector3)vector{
