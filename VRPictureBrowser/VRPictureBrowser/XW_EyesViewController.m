@@ -34,13 +34,14 @@
     panoramaView = [[PanoramaView alloc] init];
     [panoramaView setImage:@"1.jpg"];
     [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:NO];
+    [panoramaView setTouchToPan:YES];
     [panoramaView setPinchToZoom:YES];
     [panoramaView setShowTouches:NO];
 //    [self setView:panoramaView];
 
-    [self.leftEyeVisionView setMaskView:panoramaView];
+//    [self.leftEyeVisionView setMaskView:panoramaView];
     
+    [self.leftEyeVisionView addSubview:panoramaView];
     
     
 }
@@ -50,12 +51,14 @@
     panoramaView = [[PanoramaView alloc] init];
     [panoramaView setImage:@"1.jpg"];
     [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:NO];
+    [panoramaView setTouchToPan:YES];
     [panoramaView setPinchToZoom:YES];
     [panoramaView setShowTouches:NO];
     //    [self setView:panoramaView];
     
-    [self.rightEyeVisionView setMaskView:panoramaView];
+//    [self.rightEyeVisionView setMaskView:panoramaView];
+    
+    [self.rightEyeVisionView addSubview:panoramaView];
     
 }
 

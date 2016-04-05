@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="efE-CA-xDj">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="efE-CA-xDj">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -84,19 +84,31 @@
                                     <constraint firstAttribute="height" constant="301" id="NM1-DC-3DA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
-                                <rect key="frame" x="73" y="61" width="238" height="235"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
+                                <rect key="frame" x="10" y="37" width="301" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="sAO-PY-SRy" secondAttribute="height" multiplier="1:1" id="4CT-Gp-DFP"/>
+                                </constraints>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
-                                <rect key="frame" x="355" y="61" width="238" height="235"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
+                                <rect key="frame" x="356" y="37" width="301" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="48J-bS-ATf" secondAttribute="height" multiplier="1:1" id="bTf-hh-RKK"/>
+                                </constraints>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="1" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailing" secondItem="48J-bS-ATf" secondAttribute="trailing" constant="10" id="4oz-Kz-xWb"/>
+                            <constraint firstItem="yc7-XR-q9Q" firstAttribute="leading" secondItem="sAO-PY-SRy" secondAttribute="trailing" constant="20" id="aMf-9z-kW4"/>
+                            <constraint firstItem="sAO-PY-SRy" firstAttribute="leading" secondItem="hVD-R8-lEy" secondAttribute="leading" constant="10" id="ebH-gN-xQW"/>
                             <constraint firstItem="yc7-XR-q9Q" firstAttribute="centerY" secondItem="hVD-R8-lEy" secondAttribute="centerY" id="i4u-ar-DfF"/>
+                            <constraint firstItem="48J-bS-ATf" firstAttribute="centerY" secondItem="hVD-R8-lEy" secondAttribute="centerY" id="kpm-U7-OID"/>
                             <constraint firstItem="yc7-XR-q9Q" firstAttribute="centerX" secondItem="hVD-R8-lEy" secondAttribute="centerX" id="mG4-xz-ZRB"/>
+                            <constraint firstItem="sAO-PY-SRy" firstAttribute="centerY" secondItem="hVD-R8-lEy" secondAttribute="centerY" id="sDE-1c-t8X"/>
+                            <constraint firstItem="48J-bS-ATf" firstAttribute="leading" secondItem="yc7-XR-q9Q" secondAttribute="trailing" constant="20" id="tFx-9C-L6A"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
