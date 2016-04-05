@@ -8,6 +8,7 @@
 
 #import "ViewController.h"
 #import "XW_ViewController.h"
+#import "XW_EyesViewController.h"
 #import <CoreMotion/CoreMotion.h>
 
 @interface ViewController ()
@@ -53,7 +54,11 @@
 
     NSLog(@"被点击了");
     
+    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
+    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+    
+    [self.navigationController pushViewController:EyesVC animated:YES];
     
 }
 

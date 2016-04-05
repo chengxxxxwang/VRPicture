@@ -67,12 +67,12 @@
         <!--Eyes View Controller-->
         <scene sceneID="RQu-Th-atM">
             <objects>
-                <viewController id="5Fz-og-4cX" customClass="XW_EyesViewController" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="XW_EyesViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="5Fz-og-4cX" customClass="XW_EyesViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="B7J-l7-5Ou"/>
                         <viewControllerLayoutGuide type="bottom" id="fKC-FW-T58"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="hVD-R8-lEy">
+                    <view key="view" contentMode="scaleToFill" id="hVD-R8-lEy" customClass="GLKView">
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -84,14 +84,14 @@
                                     <constraint firstAttribute="height" constant="301" id="NM1-DC-3DA"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sAO-PY-SRy" customClass="GLKView">
                                 <rect key="frame" x="10" y="37" width="301" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="sAO-PY-SRy" secondAttribute="height" multiplier="1:1" id="4CT-Gp-DFP"/>
                                 </constraints>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf">
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="48J-bS-ATf" customClass="GLKView">
                                 <rect key="frame" x="356" y="37" width="301" height="301"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
@@ -120,7 +120,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PIx-8y-740" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2366.5" y="393.5"/>
+            <point key="canvasLocation" x="2404.5" y="382.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="rXe-ib-EF0">
