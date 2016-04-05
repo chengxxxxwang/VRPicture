@@ -41,8 +41,9 @@
 
 //    [self.leftEyeVisionView setMaskView:panoramaView];
     
-    [self.leftEyeVisionView addSubview:panoramaView];
+//    [self.leftEyeVisionView addSubview:panoramaView];
     
+    [self setView:panoramaView];
     
 }
 
