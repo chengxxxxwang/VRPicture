@@ -1,10 +1,4 @@
-//
-//  XW_EyesViewController.m
-//  VRPictureBrowser
-//
-//  Created by chenxingwang on 16/3/30.
-//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
-//
+
 
 #import "XW_EyesViewController.h"
 #import "PanoramaView.h"
@@ -12,7 +6,8 @@
 
 @interface XW_EyesViewController (){
 
-    PanoramaView *panoramaView;
+    PanoramaView *leftPanoramaView;
+    PanoramaView *rightPanoramaView;
 
 }
 
@@ -24,42 +19,48 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self layoutLeftView];
+//    [self layoutLeftView];
     [self layoutRightView];
+    
+    self.view.userInteractionEnabled = YES;
     
 }
 
 - (void)layoutLeftView{
-
-    panoramaView = [[PanoramaView alloc] init];
-    [panoramaView setImage:@"1.jpg"];
-    [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:YES];
-    [panoramaView setPinchToZoom:YES];
-    [panoramaView setShowTouches:NO];
-//    [self setView:panoramaView];
-
-//    [self.leftEyeVisionView setMaskView:panoramaView];
     
-//    [self.leftEyeVisionView addSubview:panoramaView];
+    CGRect frame = self.leftEyeVisionView.frame;
     
-    [self setView:panoramaView];
+    leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
+    
+    leftPanoramaView.center = self.leftEyeVisionView.center;
+    
+    [leftPanoramaView setImage:@"1.jpg"];
+    [leftPanoramaView setOrientToDevice:YES];
+    [leftPanoramaView setTouchToPan:YES];
+    [leftPanoramaView setPinchToZoom:YES];
+    [leftPanoramaView setShowTouches:YES];
+    
+    [self.leftEyeVisionView addSubview:leftPanoramaView];
+    
+
     
 }
 
 - (void)layoutRightView{
 
-    panoramaView = [[PanoramaView alloc] init];
-    [panoramaView setImage:@"1.jpg"];
-    [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:YES];
-    [panoramaView setPinchToZoom:YES];
-    [panoramaView setShowTouches:NO];
-    //    [self setView:panoramaView];
+    CGRect frame = self.rightEyeVisionView.frame;
     
-//    [self.rightEyeVisionView setMaskView:panoramaView];
+    rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-    [self.rightEyeVisionView addSubview:panoramaView];
+    rightPanoramaView.center = self.rightEyeVisionView.center;
+    
+    [rightPanoramaView setImage:@"1.jpg"];
+    [rightPanoramaView setOrientToDevice:YES];
+    [rightPanoramaView setTouchToPan:YES];
+    [rightPanoramaView setPinchToZoom:YES];
+    [rightPanoramaView setShowTouches:YES];
+    
+    [self.rightEyeVisionView addSubview:rightPanoramaView];
     
 }
 

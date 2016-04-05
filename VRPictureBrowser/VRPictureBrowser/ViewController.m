@@ -1,10 +1,4 @@
-//
-//  ViewController.m
-//  VRPictureBrowser
-//
-//  Created by apple on 16/3/1.
-//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
-//
+
 
 #import "ViewController.h"
 #import "XW_ViewController.h"
@@ -72,7 +66,7 @@
 - (void)NestPic{
     
     if (_index >= 4) {
-        _index = 0;
+        _index = 1;
     }
     
     [self pickImageWithNumber:_index];

@@ -1,10 +1,4 @@
-//
-//  AppDelegate.m
-//  VRPictureBrowser
-//
-//  Created by apple on 16/3/1.
-//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
-//
+
 
 #import "AppDelegate.h"
 
