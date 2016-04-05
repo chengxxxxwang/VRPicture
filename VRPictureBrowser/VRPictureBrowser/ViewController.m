@@ -53,6 +53,8 @@
 
     NSLog(@"被点击了");
     
+    
+    
 }
 
 - (IBAction)showPicturesButton:(id)sender {
@@ -94,7 +96,7 @@
     
     XW_ViewController *panoramaView = [XW_ViewController new];
     
-    panoramaView.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
+    panoramaView.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
     
     [self.navigationController pushViewController:panoramaView animated:YES];
     
