@@ -39,8 +39,9 @@
     [panoramaView setShowTouches:NO];
 //    [self setView:panoramaView];
 
-    [self.leftEyeVisionView setMaskView:panoramaView];
+//    [self.leftEyeVisionView setMaskView:panoramaView];
     
+    [self.leftEyeVisionView addSubview:panoramaView];
     
     
 }
@@ -55,7 +56,9 @@
     [panoramaView setShowTouches:NO];
     //    [self setView:panoramaView];
     
-    [self.rightEyeVisionView setMaskView:panoramaView];
+//    [self.rightEyeVisionView setMaskView:panoramaView];
+    
+    [self.rightEyeVisionView addSubview:panoramaView];
     
 }
 
