@@ -37,6 +37,8 @@
 		47FA1B1A1CB4FAF900C310E0 /* 8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47FA1B151CB4FAF900C310E0 /* 8.jpg */; };
 		47FA1B1B1CB4FAF900C310E0 /* 9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47FA1B161CB4FAF900C310E0 /* 9.jpg */; };
 		47FA1B1C1CB4FAF900C310E0 /* 10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 47FA1B171CB4FAF900C310E0 /* 10.jpg */; };
+		47FA1B201CB524DE00C310E0 /* XW_DoubleEyesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 47FA1B1E1CB524DE00C310E0 /* XW_DoubleEyesViewController.m */; };
+		47FA1B211CB524DE00C310E0 /* XW_DoubleEyesViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 47FA1B1F1CB524DE00C310E0 /* XW_DoubleEyesViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -99,6 +101,9 @@
 		47FA1B151CB4FAF900C310E0 /* 8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 8.jpg; sourceTree = "<group>"; };
 		47FA1B161CB4FAF900C310E0 /* 9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 9.jpg; sourceTree = "<group>"; };
 		47FA1B171CB4FAF900C310E0 /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
+		47FA1B1D1CB524DE00C310E0 /* XW_DoubleEyesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XW_DoubleEyesViewController.h; sourceTree = "<group>"; };
+		47FA1B1E1CB524DE00C310E0 /* XW_DoubleEyesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XW_DoubleEyesViewController.m; sourceTree = "<group>"; };
+		47FA1B1F1CB524DE00C310E0 /* XW_DoubleEyesViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XW_DoubleEyesViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +173,9 @@
 				47C573B31C92A6A80080C2F6 /* XW_ViewController.m */,
 				475AD6361CABBFFF00A6A681 /* XW_EyesViewController.h */,
 				475AD6371CABBFFF00A6A681 /* XW_EyesViewController.m */,
+				47FA1B1D1CB524DE00C310E0 /* XW_DoubleEyesViewController.h */,
+				47FA1B1E1CB524DE00C310E0 /* XW_DoubleEyesViewController.m */,
+				47FA1B1F1CB524DE00C310E0 /* XW_DoubleEyesViewController.xib */,
 				47FA1B041CB4A65D00C310E0 /* XW_selfDefineView.h */,
 				47FA1B051CB4A65D00C310E0 /* XW_selfDefineView.m */,
 				18D2800E1C8540F3009F95B2 /* Main.storyboard */,
@@ -355,6 +363,7 @@
 				18D280421C855FB8009F95B2 /* 0.png in Resources */,
 				18D280121C8540F3009F95B2 /* Assets.xcassets in Resources */,
 				47B77B581C92C10500DD6062 /* IK1Y[0A~$K]A_LN2HA`OTAH.gif in Resources */,
+				47FA1B211CB524DE00C310E0 /* XW_DoubleEyesViewController.xib in Resources */,
 				18D280101C8540F3009F95B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -386,6 +395,7 @@
 				18D2800A1C8540F3009F95B2 /* AppDelegate.m in Sources */,
 				47C573B41C92A6A80080C2F6 /* XW_ViewController.m in Sources */,
 				4722DEBA1C917911006931A7 /* PanoramaView.m in Sources */,
+				47FA1B201CB524DE00C310E0 /* XW_DoubleEyesViewController.m in Sources */,
 				18D280071C8540F3009F95B2 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

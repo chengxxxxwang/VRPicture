@@ -2,7 +2,16 @@
 
 #import <GLKit/GLKit.h>
 
-@interface XW_EyesViewController : GLKViewController
+#import "PanoramaView.h"
+
+
+@interface XW_EyesViewController : GLKViewController{
+    
+    PanoramaView *leftPanoramaView;
+    PanoramaView *rightPanoramaView;
+    
+}
+
 
 @property (weak, nonatomic) IBOutlet GLKView *leftEyeVisionView;
 @property (weak, nonatomic) IBOutlet GLKView *rightEyeVisionView;

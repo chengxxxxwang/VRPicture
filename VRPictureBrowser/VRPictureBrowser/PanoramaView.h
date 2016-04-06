@@ -7,9 +7,12 @@
 
 -(void) draw;  // place in GLKViewController's glkView:drawInRect:
 
+
 /// Set image by path or bundle - will check at both
 -(void) setImage:(NSString*)fileName;
 
+
+@property (nonatomic, assign) CGRect frame;
 
 /* orientation */
 

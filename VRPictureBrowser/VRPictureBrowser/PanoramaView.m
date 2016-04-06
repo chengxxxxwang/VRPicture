@@ -54,7 +54,14 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 //    } else{
 //        return [self initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
 //    }
-    return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if (self.frame.size.height == 0) {
+        
+        return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    }
+    
+    return [self initWithFrame:_frame];
 }
 - (id)initWithFrame:(CGRect)frame{
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
