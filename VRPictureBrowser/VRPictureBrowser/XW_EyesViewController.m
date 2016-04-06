@@ -61,13 +61,13 @@
 
 - (void)layoutLeftView{
     
-    CGRect frame = self.leftEyeVisionView.frame;
+    CGSize size = self.leftEyeVisionView.frame.size;
     
+    CGRect frame = CGRectZero;
     
+    frame.size = size;
     
     leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    
-    leftPanoramaView.center = self.leftEyeVisionView.center;
     
     [leftPanoramaView setImage:@"2.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
@@ -77,15 +77,21 @@
     
     [self.leftEyeVisionView addSubview:leftPanoramaView];
     
+    self.leftEyeVisionView.delegate = self;
+    
 }
 
 - (void)layoutRightView{
 
-    CGRect frame = self.rightEyeVisionView.frame;
+    CGRect frame = CGRectZero;
+    
+    CGSize size = self.rightEyeVisionView.frame.size;
+    
+    frame.size = size;
+    
+    
     
     rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    
-    rightPanoramaView.center = self.rightEyeVisionView.center;
     
     [rightPanoramaView setImage:@"1.jpg"];
     [rightPanoramaView setOrientToDevice:YES];
@@ -94,6 +100,21 @@
     [rightPanoramaView setShowTouches:YES];
     
     [self.rightEyeVisionView addSubview:rightPanoramaView];
+    
+    self.rightEyeVisionView.delegate = self;
+}
+
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+
+    if ([view isEqual:self.leftEyeVisionView]) {
+        
+        [leftPanoramaView draw];
+        
+    }else{
+    
+        [rightPanoramaView draw];
+        
+    }
     
 }
 
