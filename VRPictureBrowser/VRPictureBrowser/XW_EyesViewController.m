@@ -3,6 +3,7 @@
 #import "XW_EyesViewController.h"
 #import "PanoramaView.h"
 #import "XW_ViewController.h"
+#import "ViewController.h"
 
 @interface XW_EyesViewController (){
 
@@ -21,8 +22,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self layoutLeftView];
-    [self layoutRightView];
+//    [self layoutLeftView];
+//    [self layoutRightView];
  
 
     
@@ -44,6 +45,25 @@
 //    leftView.view.frame = leftPanoramaView.frame;
 //    [self addChildViewController:leftView];
     
+    [self layoutLeftView];
+    [self layoutRightView];
+    
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(returnToFrontView)];
+    
+    [self.midView addGestureRecognizer:tap];
+    
+    self.view.userInteractionEnabled = YES;
+    
+}
+
+- (void)returnToFrontView{
+
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
+    
+    UINavigationController *Navc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:Navc animated:YES completion:nil];
     
 }
 
@@ -77,8 +97,8 @@
     
     [self.leftEyeVisionView addSubview:leftPanoramaView];
     
-    self.leftEyeVisionView.delegate = self;
-    
+    [leftPanoramaView draw];
+
 }
 
 - (void)layoutRightView{
@@ -90,7 +110,6 @@
     frame.size = size;
     
     
-    
     rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
     [rightPanoramaView setImage:@"1.jpg"];
@@ -98,25 +117,29 @@
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
     [rightPanoramaView setShowTouches:YES];
+    [rightPanoramaView draw];
     
     [self.rightEyeVisionView addSubview:rightPanoramaView];
     
-    self.rightEyeVisionView.delegate = self;
+//    [rightPanoramaView draw];
+
 }
 
-- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+/**test rightview positon draw*/
 
-    if ([view isEqual:self.leftEyeVisionView]) {
-        
-        [leftPanoramaView draw];
-        
-    }else{
-    
-        [rightPanoramaView draw];
-        
-    }
-    
-}
+//- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+//
+//    if ([view isEqual:self.leftEyeVisionView]) {
+//        
+//        [leftPanoramaView draw];
+//        
+//    }else{
+//    
+//        [rightPanoramaView draw];
+//        
+//    }
+//    
+//}
 
 
 

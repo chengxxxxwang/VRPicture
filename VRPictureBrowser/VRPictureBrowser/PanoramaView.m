@@ -39,7 +39,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     UIPinchGestureRecognizer *pinchGesture;
     UIPanGestureRecognizer *panGesture;
     GLKMatrix4 _projectionMatrix, _attitudeMatrix, _offsetMatrix;
-    float _aspectRatio;
+    float _aspectRatio; //屏幕宽高比
     GLfloat circlePoints[64*3];  // meridian lines
 }
 @end

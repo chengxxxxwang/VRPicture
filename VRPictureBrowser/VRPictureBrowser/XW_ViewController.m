@@ -43,7 +43,7 @@
     panoramaView = [[PanoramaView alloc] init];
     [panoramaView setImage:_picName];
     [panoramaView setOrientToDevice:YES];
-    [panoramaView setTouchToPan:NO];
+    [panoramaView setTouchToPan:YES];
     [panoramaView setPinchToZoom:YES];
     [panoramaView setShowTouches:NO];
     [self setView:panoramaView];
@@ -51,6 +51,7 @@
 }
 
 -(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{
+    
     [panoramaView draw];
 }
 
