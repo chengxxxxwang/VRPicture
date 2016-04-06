@@ -52,7 +52,6 @@
     
     XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
     
-//    [self.navigationController pushViewController:EyesVC animated:YES];
     [self presentViewController:EyesVC animated:YES completion:nil];
     
 }
@@ -66,7 +65,7 @@
 
 - (void)NestPic{
     
-    if (_index >= 5) {
+    if (_index >= 11) {
         _index = 1;
     }
     

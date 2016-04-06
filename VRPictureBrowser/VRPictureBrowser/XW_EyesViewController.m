@@ -22,11 +22,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self layoutLeftView];
-//    [self layoutRightView];
- 
-
-    
     
 }
 
@@ -82,37 +77,32 @@
 - (void)layoutLeftView{
     
     CGSize size = self.leftEyeVisionView.frame.size;
-    
     CGRect frame = CGRectZero;
-    
     frame.size = size;
-    
     leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-    [leftPanoramaView setImage:@"2.jpg"];
+    [leftPanoramaView setImage:@"3.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
     [leftPanoramaView setShowTouches:YES];
-    
+    [leftPanoramaView draw];
+
     [self.leftEyeVisionView addSubview:leftPanoramaView];
     
-    [leftPanoramaView draw];
 
 }
 
 - (void)layoutRightView{
+    
+    [self.rightEyeVisionView layoutIfNeeded];
 
     CGRect frame = CGRectZero;
-    
     CGSize size = self.rightEyeVisionView.frame.size;
-    
     frame.size = size;
-    
-    
     rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-    [rightPanoramaView setImage:@"1.jpg"];
+    [rightPanoramaView setImage:@"5.jpg"];
     [rightPanoramaView setOrientToDevice:YES];
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
@@ -120,26 +110,25 @@
     [rightPanoramaView draw];
     
     [self.rightEyeVisionView addSubview:rightPanoramaView];
-    
-//    [rightPanoramaView draw];
+
 
 }
 
 /**test rightview positon draw*/
 
-//- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
-//
-//    if ([view isEqual:self.leftEyeVisionView]) {
-//        
-//        [leftPanoramaView draw];
-//        
-//    }else{
-//    
-//        [rightPanoramaView draw];
-//        
-//    }
-//    
-//}
+- (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+
+    if ([view isEqual:self.leftEyeVisionView]) {
+        
+        [leftPanoramaView draw];
+        
+    }else{
+    
+        [rightPanoramaView draw];
+        
+    }
+    
+}
 
 
 

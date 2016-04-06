@@ -41,11 +41,17 @@
 - (void)layoutPanoramaView{
 
     panoramaView = [[PanoramaView alloc] init];
+    
     [panoramaView setImage:_picName];
+   
     [panoramaView setOrientToDevice:YES];
+    
     [panoramaView setTouchToPan:YES];
+    
     [panoramaView setPinchToZoom:YES];
+    
     [panoramaView setShowTouches:NO];
+    
     [self setView:panoramaView];
     
 }
