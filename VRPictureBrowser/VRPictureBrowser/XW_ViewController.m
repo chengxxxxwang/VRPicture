@@ -3,19 +3,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 #import "XW_ViewController.h"
 #import "PanoramaView.h"
 

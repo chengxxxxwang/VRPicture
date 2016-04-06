@@ -21,8 +21,8 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-//    [self layoutLeftView];
-//    [self layoutRightView];
+    [self layoutLeftView];
+    [self layoutRightView];
  
 
     
@@ -33,25 +33,37 @@
 
     [super viewWillAppear:animated];
     
-    rightView = [XW_ViewController new];
-    rightView.picName = @"4.jpg";
-    rightView.view.frame = rightPanoramaView.frame;
-    [self addChildViewController:rightView];
-
-    
-    leftView = [XW_ViewController new];
-    leftView.picName = @"4.jpg";
-    leftView.view.frame = leftPanoramaView.frame;
-    [self addChildViewController:leftView];
+//    rightView = [XW_ViewController new];
+//    rightView.picName = @"4.jpg";
+//    rightView.view.frame = rightPanoramaView.frame;
+//    [self addChildViewController:rightView];
+//
+//    
+//    leftView = [XW_ViewController new];
+//    leftView.picName = @"4.jpg";
+//    leftView.view.frame = leftPanoramaView.frame;
+//    [self addChildViewController:leftView];
     
     
 }
 
-
+//- (void)layoutPanoramaView{
+//    
+//    panoramaView = [[PanoramaView alloc] init];
+//    [panoramaView setImage:_picName];
+//    [panoramaView setOrientToDevice:YES];
+//    [panoramaView setTouchToPan:NO];
+//    [panoramaView setPinchToZoom:YES];
+//    [panoramaView setShowTouches:NO];
+//    [self setView:panoramaView];
+//    
+//}
 
 - (void)layoutLeftView{
     
     CGRect frame = self.leftEyeVisionView.frame;
+    
+    
     
     leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
@@ -64,8 +76,6 @@
     [leftPanoramaView setShowTouches:YES];
     
     [self.leftEyeVisionView addSubview:leftPanoramaView];
-    
-
     
 }
 
