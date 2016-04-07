@@ -1,28 +1,26 @@
+//
+//  XW_DoubleEyesViewController.m
+//  VRPictureBrowser
+//
+//  Created by chenxingwang on 16/4/6.
+//  Copyright © 2016年 PaPaTV.COM. All rights reserved.
+//
 
+#import "XW_DoubleEyesViewController.h"
 
-
-
-
-#import "XW_ViewController.h"
-#import "PanoramaView.h"
-
-@interface XW_ViewController (){
-    PanoramaView *panoramaView;
-}
+@interface XW_DoubleEyesViewController ()
 
 @end
 
-@implementation XW_ViewController
+@implementation XW_DoubleEyesViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    
+    // Do any additional setup after loading the view from its nib.
 }
 
 - (void)viewWillAppear:(BOOL)animated{
-
+    
     [super viewWillAppear:animated];
     
     if (!self.picName) {
@@ -33,36 +31,29 @@
     
 }
 
-
-#pragma mark -
-#pragma mark - panoramaView
-#pragma mark -
-
 - (void)layoutPanoramaView{
-
-    panoramaView = [[PanoramaView alloc] init];
     
-//    panoramaView.frame = CGRectMake(600, 100, 80, 80);
+    _leftView = [[PanoramaView alloc] init];
     
-    [panoramaView setImage:_picName];
-   
-    [panoramaView setOrientToDevice:YES];
+    [_leftView setImage:_picName];
     
-    [panoramaView setTouchToPan:YES];
+    [_leftView setOrientToDevice:YES];
     
-    [panoramaView setPinchToZoom:YES];
+    [_leftView setTouchToPan:YES];
     
-    [panoramaView setShowTouches:NO];
+    [_leftView setPinchToZoom:YES];
     
-//    [self setView:panoramaView];
+    [_leftView setShowTouches:NO];
     
-    self.view = panoramaView;
+    //    [self setView:panoramaView];
+    
+    self.view = _leftView;
     
 }
 
 -(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{
     
-    [panoramaView draw];
+    [_leftView draw];
 }
 
 

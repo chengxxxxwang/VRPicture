@@ -1,17 +1,10 @@
 
 
 #import "XW_EyesViewController.h"
-#import "PanoramaView.h"
 #import "XW_ViewController.h"
+#import "ViewController.h"
 
-@interface XW_EyesViewController (){
-
-    PanoramaView *leftPanoramaView;
-    PanoramaView *rightPanoramaView;
-    
-    XW_ViewController *leftView;
-    XW_ViewController *rightView;
-}
+@interface XW_EyesViewController ()<GLKViewDelegate>
 
 @end
 
@@ -21,11 +14,6 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self layoutLeftView];
-    [self layoutRightView];
- 
-
-    
     
 }
 
@@ -33,76 +21,77 @@
 
     [super viewWillAppear:animated];
     
-//    rightView = [XW_ViewController new];
-//    rightView.picName = @"4.jpg";
-//    rightView.view.frame = rightPanoramaView.frame;
-//    [self addChildViewController:rightView];
-//
-//    
-//    leftView = [XW_ViewController new];
-//    leftView.picName = @"4.jpg";
-//    leftView.view.frame = leftPanoramaView.frame;
-//    [self addChildViewController:leftView];
+    [self layoutLeftView];
+    [self layoutRightView];
     
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(returnToFrontView)];
+    
+    [self.midView addGestureRecognizer:tap];
+    
+    self.view.userInteractionEnabled = YES;
     
 }
 
-//- (void)layoutPanoramaView{
-//    
-//    panoramaView = [[PanoramaView alloc] init];
-//    [panoramaView setImage:_picName];
-//    [panoramaView setOrientToDevice:YES];
-//    [panoramaView setTouchToPan:NO];
-//    [panoramaView setPinchToZoom:YES];
-//    [panoramaView setShowTouches:NO];
-//    [self setView:panoramaView];
-//    
-//}
+- (void)returnToFrontView{
+
+    UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
+    
+    UINavigationController *Navc = [[UINavigationController alloc] initWithRootViewController:vc];
+    
+    [self presentViewController:Navc animated:YES completion:nil];
+    
+}
 
 - (void)layoutLeftView{
     
     CGSize size = self.leftEyeVisionView.frame.size;
-    
     CGRect frame = CGRectZero;
-    
     frame.size = size;
+//    leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
-    leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    
-    [leftPanoramaView setImage:@"2.jpg"];
+    [leftPanoramaView setImage:@"3.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
     [leftPanoramaView setShowTouches:YES];
+
+//    [self.leftEyeVisionView addSubview:leftPanoramaView];
     
-    [self.leftEyeVisionView addSubview:leftPanoramaView];
+    [self.leftEyeVisionView setUserInteractionEnabled:YES];
+    
+    self.leftEyeVisionView = leftPanoramaView;
+//    [leftPanoramaView draw];
     
     self.leftEyeVisionView.delegate = self;
-    
+
 }
 
 - (void)layoutRightView{
+    
+    [self.rightEyeVisionView layoutIfNeeded];
 
     CGRect frame = CGRectZero;
-    
     CGSize size = self.rightEyeVisionView.frame.size;
-    
     frame.size = size;
     
     
-    
-    rightPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
-    
-    [rightPanoramaView setImage:@"1.jpg"];
+    [rightPanoramaView setImage:@"5.jpg"];
     [rightPanoramaView setOrientToDevice:YES];
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
     [rightPanoramaView setShowTouches:YES];
     
-    [self.rightEyeVisionView addSubview:rightPanoramaView];
+//    [self.rightEyeVisionView addSubview:rightPanoramaView];
+
+    self.rightEyeVisionView = rightPanoramaView;
+//    [rightPanoramaView draw];
     
     self.rightEyeVisionView.delegate = self;
+
 }
+
+/**test rightview positon draw*/
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
 

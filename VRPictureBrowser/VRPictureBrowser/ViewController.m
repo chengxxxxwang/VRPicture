@@ -4,6 +4,8 @@
 #import "XW_ViewController.h"
 #import "XW_EyesViewController.h"
 #import <CoreMotion/CoreMotion.h>
+#import "XW_DoubleEyesViewController.h"
+
 
 @interface ViewController ()
 
@@ -48,12 +50,19 @@
 
     NSLog(@"被点击了");
     
-    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+//    
+////    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+////    
+////    [self presentViewController:EyesVC animated:YES completion:nil];
     
-    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
     
-//    [self.navigationController pushViewController:EyesVC animated:YES];
-    [self presentViewController:EyesVC animated:YES completion:nil];
+    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
+    
+    [self presentViewController:DEVC animated:YES completion:nil];
+    
+    
     
 }
 
@@ -66,7 +75,7 @@
 
 - (void)NestPic{
     
-    if (_index >= 5) {
+    if (_index >= 11) {
         _index = 1;
     }
     

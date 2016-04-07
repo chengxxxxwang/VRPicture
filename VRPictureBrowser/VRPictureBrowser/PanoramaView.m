@@ -39,7 +39,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     UIPinchGestureRecognizer *pinchGesture;
     UIPanGestureRecognizer *panGesture;
     GLKMatrix4 _projectionMatrix, _attitudeMatrix, _offsetMatrix;
-    float _aspectRatio;
+    float _aspectRatio; //屏幕宽高比
     GLfloat circlePoints[64*3];  // meridian lines
 }
 @end
@@ -54,7 +54,14 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 //    } else{
 //        return [self initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
 //    }
-    return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if (self.frame.size.height == 0) {
+        
+        return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+
+    }
+    
+    return [self initWithFrame:_frame];
 }
 - (id)initWithFrame:(CGRect)frame{
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
