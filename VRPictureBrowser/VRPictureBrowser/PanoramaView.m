@@ -47,21 +47,12 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 @implementation PanoramaView
 
 -(id) init{
-// it appears that iOS already automatically does this switch, stored in UIScreen mainscreen bounds
-//    CGRect frame = [[UIScreen mainScreen] bounds];
-//    if(SENSOR_ORIENTATION == 3 || SENSOR_ORIENTATION == 4){
-//        return [self initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.height, frame.size.width)];
-//    } else{
-//        return [self initWithFrame:CGRectMake(frame.origin.x, frame.origin.y, frame.size.width, frame.size.height)];
+    
+//    if (self = [super init]) {
+//        
 //    }
     
-    if (self.frame.size.height == 0) {
-        
-        return [self initWithFrame:[[UIScreen mainScreen] bounds]];
-
-    }
-    
-    return [self initWithFrame:_frame];
+    return [self initWithFrame:[[UIScreen mainScreen] bounds]];
 }
 - (id)initWithFrame:(CGRect)frame{
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];
@@ -79,6 +70,8 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     }
     return self;
 }
+
+
 -(void) didMoveToSuperview{
 // this breaks MVC, but useful for setting GLKViewController's frame rate
     UIResponder *responder = self;

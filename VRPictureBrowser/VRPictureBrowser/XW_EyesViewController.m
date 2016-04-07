@@ -48,14 +48,15 @@
     CGSize size = self.leftEyeVisionView.frame.size;
     CGRect frame = CGRectZero;
     frame.size = size;
-//    leftPanoramaView = [[PanoramaView alloc] initWithFrame:frame];
     
+    leftPanoramaView = [[PanoramaView alloc] init];
     [leftPanoramaView setImage:@"3.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
     [leftPanoramaView setShowTouches:YES];
 
+    
 //    [self.leftEyeVisionView addSubview:leftPanoramaView];
     
     [self.leftEyeVisionView setUserInteractionEnabled:YES];
