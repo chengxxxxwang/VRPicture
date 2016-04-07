@@ -58,6 +58,8 @@
     
     self.view = panoramaView;
     
+    //TODO: 设置imageframe
+    
 }
 
 -(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{

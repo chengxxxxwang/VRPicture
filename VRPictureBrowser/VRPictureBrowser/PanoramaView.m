@@ -161,6 +161,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
         glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, whiteColor);  // panorama at full color
         [sphere execute];
         glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, clearColor);
+    
 //        [meridians execute];  // semi-transparent texture overlay (15° meridian lines)
 
 //TODO: add any objects here to make them a part of the virtual reality
