@@ -13,8 +13,10 @@
 }
 
 
-@property (weak, nonatomic) IBOutlet GLKView *leftEyeVisionView;
-@property (weak, nonatomic) IBOutlet GLKView *rightEyeVisionView;
-@property (weak, nonatomic) IBOutlet UIView *midView;
+@property (weak, nonatomic  ) IBOutlet GLKView  *leftEyeVisionView;
+@property (weak, nonatomic  ) IBOutlet GLKView  *rightEyeVisionView;
+@property (weak, nonatomic  ) IBOutlet UIView   *midView;
+@property (strong ,nonatomic) NSString *picName;
+
 
 @end
