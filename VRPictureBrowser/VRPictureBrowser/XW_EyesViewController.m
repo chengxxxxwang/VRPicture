@@ -45,19 +45,23 @@
 
 - (void)layoutLeftView{
     
+    
+    //FIXME:  fix image size
+    
+    
     CGSize size = self.leftEyeVisionView.frame.size;
     CGRect frame = CGRectZero;
     frame.size = size;
     
     leftPanoramaView = [[PanoramaView alloc] init];
-    [leftPanoramaView setImage:@"3.jpg"];
+    [leftPanoramaView setImage:@"1.jpg"];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
     [leftPanoramaView setShowTouches:YES];
 
     
-//    [self.leftEyeVisionView addSubview:leftPanoramaView];
+    [self.leftEyeVisionView addSubview:leftPanoramaView];
     
     [self.leftEyeVisionView setUserInteractionEnabled:YES];
     
@@ -76,14 +80,14 @@
     CGSize size = self.rightEyeVisionView.frame.size;
     frame.size = size;
     
-    
-    [rightPanoramaView setImage:@"5.jpg"];
+    rightPanoramaView = [[PanoramaView alloc] init];
+    [rightPanoramaView setImage:@"1.jpg"];
     [rightPanoramaView setOrientToDevice:YES];
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
     [rightPanoramaView setShowTouches:YES];
     
-//    [self.rightEyeVisionView addSubview:rightPanoramaView];
+    [self.rightEyeVisionView addSubview:rightPanoramaView];
 
     self.rightEyeVisionView = rightPanoramaView;
 //    [rightPanoramaView draw];
@@ -91,6 +95,10 @@
     self.rightEyeVisionView.delegate = self;
 
 }
+
+
+//???: why refresh once ???
+
 
 /**test rightview positon draw*/
 

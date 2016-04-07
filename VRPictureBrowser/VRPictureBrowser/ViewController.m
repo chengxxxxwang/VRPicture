@@ -48,7 +48,7 @@
 
 - (void)tapAction{
 
-    NSLog(@"被点击了");
+    NSLog(@"click VR pic");
     
     UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
@@ -61,8 +61,9 @@
 //    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
 //    
 //    [self presentViewController:DEVC animated:YES completion:nil];
+
     
-    
+    //!!!: 跳转到双眼视图
     
 }
 
