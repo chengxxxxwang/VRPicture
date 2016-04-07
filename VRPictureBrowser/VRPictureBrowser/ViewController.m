@@ -50,17 +50,17 @@
 
     NSLog(@"被点击了");
     
-//    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
+    
+    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+    
+    [self presentViewController:EyesVC animated:YES completion:nil];
+    
+//    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
 //    
-////    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
-////    
-////    [self presentViewController:EyesVC animated:YES completion:nil];
-    
-    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
-    
-    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
-    
-    [self presentViewController:DEVC animated:YES completion:nil];
+//    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
+//    
+//    [self presentViewController:DEVC animated:YES completion:nil];
     
     
     

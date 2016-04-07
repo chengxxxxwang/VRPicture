@@ -12,7 +12,7 @@
 -(void) setImage:(NSString*)fileName;
 
 
-@property (nonatomic, assign) CGRect frame;
+//@property (nonatomic, assign) CGRect frame;
 
 /* orientation */
 
