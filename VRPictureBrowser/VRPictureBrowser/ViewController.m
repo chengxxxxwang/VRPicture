@@ -18,7 +18,11 @@
 @implementation ViewController
 
 - (void)viewDidLoad {
+    
+    _index = 2;
+    
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tapAction)];
@@ -29,6 +33,8 @@
     
     self.pictureImageView.userInteractionEnabled = YES;
     
+    [self NestPic];
+
     
 }
 
@@ -40,7 +46,7 @@
     
     XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
     
-    EyesVC.imageName = [NSString stringWithFormat:@"%ld.jpg",_index];
+    EyesVC.imageName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
     
     [self presentViewController:EyesVC animated:YES completion:nil];
     
@@ -63,7 +69,7 @@
 - (void)NestPic{
     
     if (_index >= 11) {
-        _index = 1;
+        _index = 2;
     }
     
     [self pickImageWithNumber:_index];
