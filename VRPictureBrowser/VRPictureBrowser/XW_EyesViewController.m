@@ -54,7 +54,7 @@
     frame.size = size;
     
     leftPanoramaView = [[PanoramaView alloc] init];
-    [leftPanoramaView setImage:@"1.jpg"];
+    [leftPanoramaView setImage:_picName];
     [leftPanoramaView setOrientToDevice:YES];
     [leftPanoramaView setTouchToPan:YES];
     [leftPanoramaView setPinchToZoom:YES];
@@ -81,7 +81,7 @@
     frame.size = size;
     
     rightPanoramaView = [[PanoramaView alloc] init];
-    [rightPanoramaView setImage:@"1.jpg"];
+    [rightPanoramaView setImage:_picName];
     [rightPanoramaView setOrientToDevice:YES];
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
@@ -97,7 +97,7 @@
 }
 
 
-//???: why refresh once ???
+//???: why refresh once 
 
 
 /**test rightview positon draw*/

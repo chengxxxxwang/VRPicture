@@ -54,6 +54,8 @@
     
     XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
     
+    EyesVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
+    
     [self presentViewController:EyesVC animated:YES completion:nil];
     
 //    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
