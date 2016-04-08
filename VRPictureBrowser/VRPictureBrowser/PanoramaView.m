@@ -52,7 +52,9 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 //        
 //    }
     
-    return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+//    return [self initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    return [self initWithFrame:CGRectMake(0, 0, 241.5, 241.5)];
 }
 - (id)initWithFrame:(CGRect)frame{
     EAGLContext *context = [[EAGLContext alloc] initWithAPI:kEAGLRenderingAPIOpenGLES1];

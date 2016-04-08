@@ -3,7 +3,7 @@
 #import "XW_EyesViewController.h"
 #import "XW_ViewController.h"
 #import "ViewController.h"
-
+@import CoreMotion;
 @interface XW_EyesViewController ()<GLKViewDelegate>
 
 @end
@@ -45,24 +45,22 @@
 
 - (void)layoutLeftView{
     
-    CGSize size = self.leftEyeVisionView.frame.size;
-    CGRect frame = CGRectZero;
-    frame.size = size;
+//    CGSize size = self.leftEyeVisionView.frame.size;
+//    CGRect frame = CGRectZero;
+//    frame.size = size;
     
     leftPanoramaView = [[PanoramaView alloc] init];
-    [leftPanoramaView setImage:@"3.jpg"];
+    [leftPanoramaView setImage:_imageName];
     [leftPanoramaView setOrientToDevice:YES];
-    [leftPanoramaView setTouchToPan:YES];
-    [leftPanoramaView setPinchToZoom:YES];
-    [leftPanoramaView setShowTouches:YES];
+    
+//    [leftPanoramaView setTouchToPan:YES];
+//    [leftPanoramaView setPinchToZoom:YES];
+//    [leftPanoramaView setShowTouches:YES];
 
     
-//    [self.leftEyeVisionView addSubview:leftPanoramaView];
-    
-    [self.leftEyeVisionView setUserInteractionEnabled:YES];
+    [self.leftEyeVisionView addSubview:leftPanoramaView];
     
     self.leftEyeVisionView = leftPanoramaView;
-//    [leftPanoramaView draw];
     
     self.leftEyeVisionView.delegate = self;
 
@@ -72,21 +70,21 @@
     
     [self.rightEyeVisionView layoutIfNeeded];
 
-    CGRect frame = CGRectZero;
-    CGSize size = self.rightEyeVisionView.frame.size;
-    frame.size = size;
+//    CGRect frame = CGRectZero;
+//    CGSize size = self.rightEyeVisionView.frame.size;
+//    frame.size = size;
     
-    
-    [rightPanoramaView setImage:@"5.jpg"];
+    rightPanoramaView = [[PanoramaView alloc] init];
+    [rightPanoramaView setImage:_imageName];
     [rightPanoramaView setOrientToDevice:YES];
-    [rightPanoramaView setTouchToPan:YES];
-    [rightPanoramaView setPinchToZoom:YES];
-    [rightPanoramaView setShowTouches:YES];
     
-//    [self.rightEyeVisionView addSubview:rightPanoramaView];
+//    [rightPanoramaView setTouchToPan:YES];
+//    [rightPanoramaView setPinchToZoom:YES];
+//    [rightPanoramaView setShowTouches:YES];
+    
+    [self.rightEyeVisionView addSubview:rightPanoramaView];
 
     self.rightEyeVisionView = rightPanoramaView;
-//    [rightPanoramaView draw];
     
     self.rightEyeVisionView.delegate = self;
 

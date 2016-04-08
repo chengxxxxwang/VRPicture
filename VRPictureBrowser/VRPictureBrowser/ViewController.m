@@ -29,20 +29,6 @@
     
     self.pictureImageView.userInteractionEnabled = YES;
     
-    [self MotionMoved];
-    
-}
-
-- (void)MotionMoved{
-
-    CMAccelerometerData *accelerometerData = _motionManager.accelerometerData;
-    
-    CGFloat accelerometerX = accelerometerData.acceleration.x;
-    CGFloat accelerometerY = accelerometerData.acceleration.y;
-    CGFloat accelerometerZ = accelerometerData.acceleration.z;
-    
-    NSLog(@"%f,%f,%f",accelerometerX,accelerometerY,accelerometerZ);
-    
     
 }
 
@@ -53,6 +39,8 @@
     UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
     
     XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+    
+    EyesVC.imageName = [NSString stringWithFormat:@"%ld.jpg",_index];
     
     [self presentViewController:EyesVC animated:YES completion:nil];
     
@@ -70,7 +58,6 @@
     
     [self NestPic];
     
-    [self MotionMoved];
 }
 
 - (void)NestPic{
