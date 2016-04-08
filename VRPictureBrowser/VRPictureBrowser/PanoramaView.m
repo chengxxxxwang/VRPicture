@@ -46,6 +46,10 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
 
 @implementation PanoramaView
 
+//???: 在这进行初始化frame
+
+//TODO: 适配屏幕 根据不同设备设置不同frame
+
 -(id) init{
     
 //    if (self = [super init]) {
@@ -73,7 +77,7 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     return self;
 }
 
-
+//???:  暂不调用
 -(void) didMoveToSuperview{
 // this breaks MVC, but useful for setting GLKViewController's frame rate
     UIResponder *responder = self;
@@ -86,6 +90,9 @@ GLKQuaternion GLKQuaternionFromTwoVectors(GLKVector3 u, GLKVector3 v){
     if([responder respondsToSelector:@selector(setPreferredFramesPerSecond:)])
         [(GLKViewController*)responder setPreferredFramesPerSecond:FPS];
 }
+
+//!!!: 初始化设备所有参数
+
 -(void) initDevice{
     motionManager = [[CMMotionManager alloc] init];
     pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchHandler:)];

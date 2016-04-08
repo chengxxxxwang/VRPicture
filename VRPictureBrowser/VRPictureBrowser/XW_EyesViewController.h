@@ -5,12 +5,7 @@
 #import "PanoramaView.h"
 
 
-@interface XW_EyesViewController : GLKViewController{
-    
-    PanoramaView *leftPanoramaView;
-    PanoramaView *rightPanoramaView;
-    
-}
+@interface XW_EyesViewController : GLKViewController
 
 @property (strong ,nonatomic) NSString *imageName;
 @property (weak, nonatomic  ) IBOutlet GLKView  *leftEyeVisionView;

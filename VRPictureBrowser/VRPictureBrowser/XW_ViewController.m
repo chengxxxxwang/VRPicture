@@ -38,6 +38,9 @@
 #pragma mark - panoramaView
 #pragma mark -
 
+
+//FIXME: 单一修改frame后视图产生形变 其他功能不受影响
+
 - (void)layoutPanoramaView{
 
     panoramaView = [[PanoramaView alloc] init];

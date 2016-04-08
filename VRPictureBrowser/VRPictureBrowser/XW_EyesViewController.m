@@ -4,7 +4,14 @@
 #import "XW_ViewController.h"
 #import "ViewController.h"
 @import CoreMotion;
-@interface XW_EyesViewController ()<GLKViewDelegate>
+@interface XW_EyesViewController (){
+    
+    PanoramaView *leftPanoramaView;
+    PanoramaView *rightPanoramaView;
+    
+    PanoramaView *panoramaView;
+    
+}
 
 @end
 
@@ -24,6 +31,23 @@
     [self layoutLeftView];
     [self layoutRightView];
     
+    //FIXME: 使用MainstoryBoard创建view 会导致页面跳转UITransition 无法释放 分支修改为 xib 或者纯代码模式
+    
+//    panoramaView = [[PanoramaView alloc] init];
+//    [panoramaView setImage:_imageName];
+//    [panoramaView setOrientToDevice:YES];
+//    [panoramaView setTouchToPan:YES];
+//    [panoramaView setPinchToZoom:YES];
+//    [panoramaView setShowTouches:NO];
+//    
+//    
+//    
+//    leftPanoramaView = panoramaView;
+//    rightPanoramaView = panoramaView;
+//    
+//    
+//    leftPanoramaView.delegate = self;
+//    rightPanoramaView.delegate = self;
     
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(returnToFrontView)];
     
@@ -31,12 +55,15 @@
     
     self.view.userInteractionEnabled = YES;
     
+    
+    
 }
 
 - (void)returnToFrontView{
 
     UIViewController *vc = [[UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]] instantiateViewControllerWithIdentifier:@"ViewController"];
     
+//    ViewController *vc = [[ViewController alloc] init];
     UINavigationController *Navc = [[UINavigationController alloc] initWithRootViewController:vc];
     
     [self presentViewController:Navc animated:YES completion:nil];
@@ -61,7 +88,10 @@
     [self.leftEyeVisionView addSubview:leftPanoramaView];
     
     self.leftEyeVisionView = leftPanoramaView;
+    [leftPanoramaView draw];
     
+    //???: 设置代理之后只执行了draw命令一次 bug??
+
     self.leftEyeVisionView.delegate = self;
 
 }
@@ -74,6 +104,9 @@
 //    CGSize size = self.rightEyeVisionView.frame.size;
 //    frame.size = size;
     
+    //TODO: 加载陀螺仪
+    //!!!: 加载陀螺仪任务
+    
     rightPanoramaView = [[PanoramaView alloc] init];
     [rightPanoramaView setImage:_imageName];
     [rightPanoramaView setOrientToDevice:YES];
@@ -85,7 +118,8 @@
     [self.rightEyeVisionView addSubview:rightPanoramaView];
 
     self.rightEyeVisionView = rightPanoramaView;
-    
+    [rightPanoramaView draw];
+
     self.rightEyeVisionView.delegate = self;
 
 }
@@ -93,6 +127,8 @@
 /**test rightview positon draw*/
 
 - (void)glkView:(GLKView *)view drawInRect:(CGRect)rect{
+    
+    
 
     if ([view isEqual:self.leftEyeVisionView]) {
         
@@ -103,6 +139,8 @@
         [rightPanoramaView draw];
         
     }
+    
+    [panoramaView draw];
     
 }
 
