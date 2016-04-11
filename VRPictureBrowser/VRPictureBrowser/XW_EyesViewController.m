@@ -65,9 +65,7 @@
     
     [self.leftEyeVisionView setUserInteractionEnabled:YES];
     
-    self.leftEyeVisionView = leftPanoramaView;
-//    [leftPanoramaView draw];
-    
+    self.leftEyeVisionView = leftPanoramaView;    
     self.leftEyeVisionView.delegate = self;
 
 }
@@ -90,8 +88,6 @@
     [self.rightEyeVisionView addSubview:rightPanoramaView];
 
     self.rightEyeVisionView = rightPanoramaView;
-//    [rightPanoramaView draw];
-    
     self.rightEyeVisionView.delegate = self;
 
 }
