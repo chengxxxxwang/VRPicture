@@ -8,7 +8,12 @@
 
 #import "XW_DoubleEyesViewController.h"
 
-@interface XW_DoubleEyesViewController ()
+@interface XW_DoubleEyesViewController (){
+    
+    PanoramaView *leftPanoramaView;
+    PanoramaView *rightPanoramaView;
+    
+}
 
 @end
 
@@ -17,6 +22,10 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+    
+    [self layoutPanoramaView];
+    
+
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -33,27 +42,43 @@
 
 - (void)layoutPanoramaView{
     
-    _leftView = [[PanoramaView alloc] init];
+    leftPanoramaView = [[PanoramaView alloc] init];
+    [leftPanoramaView setImage:_picName];
+    [leftPanoramaView setOrientToDevice:YES];
+    [leftPanoramaView setTouchToPan:YES];
+    [leftPanoramaView setPinchToZoom:YES];
+    [leftPanoramaView setShowTouches:YES];
     
-    [_leftView setImage:_picName];
     
-    [_leftView setOrientToDevice:YES];
+    [self.leftView addSubview:leftPanoramaView];
+    [self.leftView setUserInteractionEnabled:YES];
     
-    [_leftView setTouchToPan:YES];
+    self.leftView = leftPanoramaView;
+    self.leftView.delegate = self;
     
-    [_leftView setPinchToZoom:YES];
     
-    [_leftView setShowTouches:NO];
+    rightPanoramaView = [[PanoramaView alloc] init];
     
-    //    [self setView:panoramaView];
+    [rightPanoramaView setImage:_picName];
+    [rightPanoramaView setOrientToDevice:YES];
+    [rightPanoramaView setTouchToPan:YES];
+    [rightPanoramaView setPinchToZoom:YES];
+    [rightPanoramaView setShowTouches:YES];
+    [self.rightView addSubview:rightPanoramaView];
+
     
-    self.view = _leftView;
+    self.rightView = rightPanoramaView;
+    self.rightView.delegate = self;
+
     
 }
 
 -(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{
-    
-    [_leftView draw];
+ 
+        [rightPanoramaView draw];
+
+        [leftPanoramaView draw];
+
 }
 
 

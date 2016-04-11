@@ -6,7 +6,6 @@
 #import <CoreMotion/CoreMotion.h>
 #import "XW_DoubleEyesViewController.h"
 
-
 @interface ViewController ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *pictureImageView;
@@ -48,22 +47,26 @@
 
 - (void)tapAction{
 
-    NSLog(@"click VR pic");
-    
-    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
-    
-    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
-    
-    EyesVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
-    
-    [self presentViewController:EyesVC animated:YES completion:nil];
-    
-//    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
+    NSLog(@"VR pic is touched");
 //    
-//    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index];
+//    UIStoryboard *Main = [UIStoryboard storyboardWithName:@"Main" bundle:[NSBundle mainBundle]];
 //    
+//    XW_EyesViewController *EyesVC = [Main instantiateViewControllerWithIdentifier:@"XW_EyesViewController"];
+//    
+//    EyesVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
+//    
+//    [self presentViewController:EyesVC animated:YES completion:nil];
+    
+    XW_DoubleEyesViewController  *DEVC = [XW_DoubleEyesViewController new];
+    
+    DEVC.view.backgroundColor = [UIColor whiteColor];
+    
+    DEVC.picName = [NSString stringWithFormat:@"%ld.jpg",_index - 1];
+    
 //    [self presentViewController:DEVC animated:YES completion:nil];
+    
 
+    [self.navigationController pushViewController:DEVC animated:YES];
     
     //!!!: 跳转到双眼视图
     

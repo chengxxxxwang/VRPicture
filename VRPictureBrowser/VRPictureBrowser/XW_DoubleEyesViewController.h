@@ -14,12 +14,12 @@
 
 @interface XW_DoubleEyesViewController : GLKViewController
 
-@property (nonatomic,strong) NSString *picName;
+@property (nonatomic,strong ) NSString *picName;
 
-@property (strong, nonatomic) IBOutlet  PanoramaView *leftView;
+@property (strong, nonatomic) IBOutlet  GLKView  *leftView;
 
-@property (strong, nonatomic) IBOutlet  PanoramaView *rightView;
+@property (strong, nonatomic) IBOutlet  GLKView  *rightView;
 
-@property (weak, nonatomic) IBOutlet UIView *midLine;
+@property (weak, nonatomic  ) IBOutlet  UIView   *midLine;
 
 @end
