@@ -38,39 +38,41 @@
     
     GLKView *leftView = [[GLKView alloc] init];
     leftView.frame = CGRectMake(0, 0, 290, 290);
-    leftView.backgroundColor = [UIColor whiteColor];
+    leftView.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    
     [self.view addSubview:leftView];
     
     leftPanoramaView = [[PanoramaView alloc] init];
     [leftPanoramaView setImage:_picName];
     [leftPanoramaView setOrientToDevice:YES];
-    [leftPanoramaView setTouchToPan:YES];
-    [leftPanoramaView setPinchToZoom:YES];
-    [leftPanoramaView setShowTouches:YES];
+    [leftPanoramaView setTouchToPan:NO];
+    [leftPanoramaView setPinchToZoom:NO];
+    [leftPanoramaView setShowTouches:NO];
     
     
     [leftView addSubview:leftPanoramaView];
     [leftView setUserInteractionEnabled:YES];
     
-    leftView = leftPanoramaView;
+//    leftView = leftPanoramaView;
     leftView.delegate = self;
     
     
     GLKView *rightView = [[GLKView alloc] init];
     rightView.frame = CGRectMake(0, 365, 290, 290);
+    rightView.layer.backgroundColor = [UIColor whiteColor].CGColor;
     [self.view addSubview:rightView];
     
     rightPanoramaView = [[PanoramaView alloc] init];
     
     [rightPanoramaView setImage:_picName];
     [rightPanoramaView setOrientToDevice:YES];
-    [rightPanoramaView setTouchToPan:YES];
-    [rightPanoramaView setPinchToZoom:YES];
-    [rightPanoramaView setShowTouches:YES];
+    [rightPanoramaView setTouchToPan:NO];
+    [rightPanoramaView setPinchToZoom:NO];
+    [rightPanoramaView setShowTouches:NO];
     [rightView addSubview:rightPanoramaView];
     
     
-    rightView = rightPanoramaView;
+//    rightView = rightPanoramaView;
     rightView.delegate = self;
     
     
