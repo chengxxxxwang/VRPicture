@@ -1,32 +1,27 @@
 //
-//  XW_DoubleEyesViewController.m
+//  XW_DoubleViewController.m
 //  VRPictureBrowser
 //
-//  Created by chenxingwang on 16/4/6.
+//  Created by chenxingwang on 16/4/11.
 //  Copyright © 2016年 PaPaTV.COM. All rights reserved.
 //
 
-#import "XW_DoubleEyesViewController.h"
+#import "XW_DoubleViewController.h"
 
-@interface XW_DoubleEyesViewController ()<GLKViewDelegate>{
-    
-    PanoramaView *leftPanoramaView;
-    PanoramaView *rightPanoramaView;
-    
-}
+@interface XW_DoubleViewController ()
 
 @end
 
-@implementation XW_DoubleEyesViewController
+@implementation XW_DoubleViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
-
+    // Do any additional setup after loading the view.
+    
+    self.view.layer.backgroundColor = [UIColor whiteColor].CGColor;
+    
     [self layoutPanoramaView];
     
-    
-
 }
 
 - (void)viewWillAppear:(BOOL)animated{
@@ -41,6 +36,11 @@
 
 - (void)layoutPanoramaView{
     
+    GLKView *leftView = [[GLKView alloc] init];
+    leftView.frame = CGRectMake(0, 0, 290, 290);
+    leftView.backgroundColor = [UIColor whiteColor];
+    [self.view addSubview:leftView];
+    
     leftPanoramaView = [[PanoramaView alloc] init];
     [leftPanoramaView setImage:_picName];
     [leftPanoramaView setOrientToDevice:YES];
@@ -49,12 +49,16 @@
     [leftPanoramaView setShowTouches:YES];
     
     
-    [self.leftView addSubview:leftPanoramaView];
-    [self.leftView setUserInteractionEnabled:YES];
+    [leftView addSubview:leftPanoramaView];
+    [leftView setUserInteractionEnabled:YES];
     
-    self.leftView = leftPanoramaView;
-    self.leftView.delegate = self;
+    leftView = leftPanoramaView;
+    leftView.delegate = self;
     
+    
+    GLKView *rightView = [[GLKView alloc] init];
+    rightView.frame = CGRectMake(0, 365, 290, 290);
+    [self.view addSubview:rightView];
     
     rightPanoramaView = [[PanoramaView alloc] init];
     
@@ -63,27 +67,24 @@
     [rightPanoramaView setTouchToPan:YES];
     [rightPanoramaView setPinchToZoom:YES];
     [rightPanoramaView setShowTouches:YES];
-    [self.rightView addSubview:rightPanoramaView];
-
+    [rightView addSubview:rightPanoramaView];
     
-    self.rightView = rightPanoramaView;
-    self.rightView.delegate = self;
-
+    
+    rightView = rightPanoramaView;
+    rightView.delegate = self;
+    
     
 }
 
 -(void) glkView:(GLKView *)view drawInRect:(CGRect)rect{
- 
-    if ([view isEqual:self.leftView]) {
+    
+    if ([view isEqual:[GLKView class]]) {
         
         [leftPanoramaView draw];
-        
-    }else{
-        
         [rightPanoramaView draw];
         
     }
-
+    
 }
 
 
